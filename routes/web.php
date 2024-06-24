@@ -21,11 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::get('/pages', [PageController::class, 'index'])->name('pages.index');
     Route::get('/pages/{id}', [PageController::class, 'show'])->name('pages.show');
     Route::post('/pages/{id}', [PageController::class, 'update'])->name('pages.update');

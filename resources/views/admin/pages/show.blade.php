@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ $page->name }} Page
+            {{ $page->name }} Content
         </h2>
     </x-slot>
 
@@ -9,13 +9,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @foreach($sections = $page->sections as $section)
                 <div class="mb-4 text-gray-900 text-base font-weight-bold">
-                    {{ $section->name }} Section
+                    {{ $section->name }}
                 </div>
             <div class="mb-6 p-6  bg-white overflow-hidden shadow-sm sm:rounded-lg"
                >
 
-                <div class="grid grid-cols-2">
-                    <div class="page-image"   style="background-image: url({{asset($section->image)}});"></div>
+                <div class="grid {{isset($section->image)?'grid-cols-2':''}}">
+                    @if(isset($section->image))
+                    <div  class="page-image"   style="background-image: url({{asset($section->image)}});"></div>
+                    @endif
                     <div>
                         <form method="post" action="{{route("pages.update",["id"=>$section->id])}}" enctype="multipart/form-data">
                             @csrf
@@ -34,7 +36,7 @@
                             </div>
                             <div class="mb-4">
                                 <x-input-label for="description" :value="__('Description')" />
-                                <x-text-input id="tinymce" class="tinymce block mt-1 w-full" type="text" name="description" value="{{$section->description}}" autocomplete="description" />
+                                <textarea class="editor block mt-1 w-full" type="text" name="description" autocomplete="description" >{{$section->description}}</textarea>
                             </div>
 
                             <x-primary-button >

@@ -1,32 +1,38 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-auth-layout>
+    <div class="auth bg-cover shadow dark" style="background: url(assetsv1/img/banner/3.jpg);">
+        <div class="form">
+            <!-- Session Status -->
+            <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <section>
-        <div class="block">
-            <div class="container">
-                <div class="cnt-inr" style="background-image: url({{asset('assets/images/pattern-bg2.png')}});">
-                    <h2 itemprop="headline">Login <span class="thm-clr">Administration Panel</span></h2>
-                    <p itemprop="description">Submit your credentials below</p>
-                    <form method="POST" action="{{ route('login') }}" class="cnt-frm">
-                        @csrf
-                        <div class="row mrg10">
-                            <div class="col-md-12 col-sm-12 col-lg-12">
-                                <input type="email" name="email" placeholder="Email Address">
-                                <x-input-error :messages="$errors->get('email')" class="mb-2 text-error" />
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-lg-12">
-                                <input type="password" name="password" placeholder="Password">
-                                <x-input-error :messages="$errors->get('password')" class="mb-2 text-error" />
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-lg-12">
-                                <button class="thm-btn" type="submit">Proceed<span style="top: -8px; left: 206px;"></span></button>
-                            </div>
+            <section>
+                <div class="block">
+                    <div class="container">
+                        <div class="">
+                            <h2 itemprop="title">CARD CMS</h2>
+                            <p itemprop="description">Submit your credentials</p>
+                            <form method="POST" action="{{ route('login') }}" class="cnt-frm">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input class="form-control mb-2" type="email" name="email" placeholder="Email Address" value="{{old("email")}}">
+                                        <x-input-error :messages="$errors->get('email')" class="mb-2 text-error" />
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input class="form-control mb-2" type="password" name="password" placeholder="Password" value="{{old("password")}}">
+                                        <x-input-error :messages="$errors->get('password')" class="mb-2 text-error" />
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="thm-btn" type="submit">Proceed<span style="top: -8px; left: 206px;"></span></button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 
-</x-guest-layout>
+
+
+</x-auth-layout>

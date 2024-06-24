@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
+    public function dashboard()
+    {
+        return view('dashboard',);
+    }
     public function index()
     {
         $pages = PageGroup::all();
@@ -54,9 +58,10 @@ class PageController extends Controller
                 }
             }
 
-            $pages = PageGroup::all();
-            return view('admin.pages.index', compact('pages'));
+//            $pages = PageGroup::all();
+//            return view('admin.pages.index', compact('pages'));
 //            Redirect::route("pages.index")->with("success","Page updated successfully");
+            return Redirect::back()->with("success", "{$page->name} content updated!");
 
         }else{
             Redirect::back()->with("error","Page not found");
@@ -65,15 +70,21 @@ class PageController extends Controller
 
     public function home()
     {
-        $hero_section = Page::find(1);
-        $introduction_section = Page::find(2);
-        $publications_section = Page::find(3);
-        $about_us_section = Page::find(4);
-        $recent_news_section = Page::find(5);
-        $research_link_section = Page::find(6);
-        $publications_link_section = Page::find(7);
-        $outreach_link_section = Page::find(8);
-        $consulting_link_section = Page::find(9);
-        return view('home',compact("hero_section","introduction_section","publications_section","about_us_section","recent_news_section","research_link_section","publications_link_section","outreach_link_section","consulting_link_section"));
+        $first_banner = Page::find(1);
+        $second_banner = Page::find(2);
+        $introduction = Page::find(3);
+        $mission = Page::find(4);
+        $vision = Page::find(5);
+        $thematic_areas = Page::find(6);
+        $pillars_research = Page::find(7);
+        $pillars_consultancy = Page::find(8);
+        $pillars_training = Page::find(9);
+        $pillars_outreach = Page::find(10);
+        $targets_money = Page::find(11);
+        $targets_policy_briefs = Page::find(12);
+        $targets_students = Page::find(13);
+        $targets_dashboards = Page::find(14);
+        $targets_publications = Page::find(15);
+        return view('home_1',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
     }
 }

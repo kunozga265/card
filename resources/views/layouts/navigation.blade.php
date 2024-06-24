@@ -3,6 +3,18 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
+                <!-- drawer init and show -->
+                <div class="text-center flex align-items-center mr-5">
+                    <button class="" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+{{--                        <svg class="flex-shrink-0 w-5 h-5 text-gray-600 transition duration-75  group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">--}}
+{{--                            <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>--}}
+{{--                        </svg>--}}
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-600 transition duration-75  group-hover:text-gray-900 dark:group-hover:text-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                            <path d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z"></path>
+                        </svg>
+                    </button>
+                </div>
+
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
@@ -10,17 +22,17 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('pages.index')" :active="request()->routeIs('pages.index')">
-                        {{ __('Pages') }}
-                    </x-nav-link>
-                </div>
+{{--                <!-- Navigation Links -->--}}
+{{--                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">--}}
+{{--                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">--}}
+{{--                        {{ __('Dashboard') }}--}}
+{{--                    </x-nav-link>--}}
+{{--                </div>--}}
+{{--                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">--}}
+{{--                    <x-nav-link :href="route('pages.index')" :active="request()->routeIs('pages.index')">--}}
+{{--                        {{ __('Pages') }}--}}
+{{--                    </x-nav-link>--}}
+{{--                </div>--}}
             </div>
 
             <!-- Settings Dropdown -->
