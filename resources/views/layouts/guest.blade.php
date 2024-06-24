@@ -25,7 +25,7 @@
     <link href="{{asset('assetsv1/css/style-extra.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['', 'resources/js/app.js'])
+
 </head>
 <body class="">
 
