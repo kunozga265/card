@@ -1,0 +1,38 @@
+HTTrack3.49-2 launched on Mon, 17 Jun 2024 18:04:34 at https://validthemes.net/site-template/agrica
+(winhttrack https://validthemes.net/site-template/agrica -O "/Users/kunozga/websites/agrica" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/team.html (from https://validthemes.net/site-template/agrica/)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/contact-us.html (from https://validthemes.net/site-template/agrica/)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/team-details.html (from https://validthemes.net/site-template/agrica/)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-brands-400.eot (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-brands-400.eot? (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-brands-400.ttf (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-brands-400.svg (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-duotone-900.eot (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-duotone-900.eot? (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-duotone-900.ttf (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-duotone-900.svg (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-light-300.eot (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-light-300.eot? (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-light-300.ttf (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-light-300.svg (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-regular-400.eot (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-regular-400.eot? (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-regular-400.ttf (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-regular-400.svg (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-solid-900.eot (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-solid-900.eot? (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-solid-900.ttf (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/fa-solid-900.svg (from https://validthemes.net/site-template/agrica/assets/css/font-awesome.min.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/fonts/flaticon.svg (from https://validthemes.net/site-template/agrica/assets/css/flaticon-set.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/css/flaticon.svg (from https://validthemes.net/site-template/agrica/assets/css/flaticon-set.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/assets/img/shape/35.png (from https://validthemes.net/site-template/agrica/assets/css/style.css)
+18:08:44	Error: 	"Not Found" (404) at link https://validthemes.net/site-template/agrica/$ (from https://validthemes.net/site-template/agrica/blog-single.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 10 seconds : 246 links scanned, 218 files written (12580039 bytes overall) [10463052 bytes received at 41852 bytes/sec], 2951996 bytes transferred using HTTP compression in 85 files, ratio 22%, 11.2 requests per connection
+(27 errors, 0 warnings, 0 messages)
