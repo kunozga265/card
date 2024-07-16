@@ -340,14 +340,14 @@ a, .btn, button {
 	transition: all 0.35s ease-in-out;
 	outline: medium none;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 300;
 }
 
 p {
 	color: var(--color-paragraph);
 	margin: 0 0 25px;
 	text-transform: none;
-	font-weight: 500;
+	font-weight: 300;
 	font-family: var(--font-default);
 }
 
@@ -761,15 +761,18 @@ p {
 }
 
 .title {
-	font-weight: 600;
-	font-size: 50px !important;
-	margin-top: -10px;
-	margin-bottom: 45px;
+    font-weight: 600;
+    font-size: 25px !important;
+    margin-top: -10px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 767px) {
 	.title {
-		font-size: 36px !important;
+		font-size: 22px !important;
+        font-weight: 700;
 		margin-top: 0;
 	}
 }
@@ -2749,6 +2752,8 @@ a.btn-round-animation.dark {
 .item-flex {
 	align-items: center;
 	display: flex;
+    font-size: 13px;
+    font-weight: 300;
 }
 
 .item-flex li {
@@ -2772,7 +2777,7 @@ a.btn-round-animation.dark {
 }
 
 .top-bar-area li a {
-	font-weight: 400;
+	font-weight: 300;
 }
 
 .top-bar-area .social li {
@@ -4282,9 +4287,10 @@ ul.top-feature li p {
 }
 
 .fun-fact-style-flex .medium {
-	font-weight: 700;
+	font-weight: 300;
+    font-size: 24px;
 	line-height: 1.7;
-	color: var(--color-heading);
+	color: var(--color-paragraph);
 }
 
 ul.top-feature li:nth-child(2) h4 {
@@ -4359,7 +4365,7 @@ ul.top-feature li:nth-child(2) p {
 
 .service-style-one-item .top span {
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 300;
 	font-size: 18px;
 	color: var(--color-secondary);
 	display: block;
@@ -5016,7 +5022,7 @@ ul.list-standard {
 	font-size: 17px;
 	padding-left: 25px;
 	line-height: 2;
-	font-weight: 500;
+	font-weight: 300;
 }
 
 .list-standard li::after {
@@ -5823,6 +5829,10 @@ ul.list-simple li::after {
 	background: var(--color-secondary);
 	color: var(--white);
 	line-height: 27px;
+}
+
+ul.list-simple li h4 {
+	font-weight: 300;
 }
 
 ul.list-simple li p {
@@ -8231,8 +8241,12 @@ footer {
 	}
 
 	.fun-fact-style-flex .counter {
-		font-size: 60px;
+		font-size: 90px;
 	}
+
+    .fun-fact-style-flex .medium {
+        font-size: 22px;
+    }
 
 	/* Why Choose Us */
 	.choose-us-style-two-area::after {
@@ -8869,8 +8883,12 @@ footer {
 	}
 
 	.fun-fact-style-flex .counter {
-		font-size: 60px;
+		font-size: 80px;
 	}
+
+    .fun-fact-style-flex .medium {
+        font-size: 20px;
+    }
 
 	/* Feature */
 	.feature-style-one-item img {
@@ -9504,7 +9522,7 @@ footer {
 	}
 
 	.fun-fact-style-flex .medium {
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 1.6;
 	}
 
@@ -9800,4 +9818,22 @@ footer {
 
 .text-error li{
     color: #bd081c;
+}
+
+a.navbar-brand span{
+    margin-right: 12px;
+    /*font-weight: bold;*/
+    font-size: 30px;
+}
+
+.our-targets{
+    /*background-color: white;*/
+    /*padding-top: 60px;*/
+    /*padding-bottom: 60px;*/
+}
+
+@media (max-width: 1024px) {
+.our-targets .fun-fact .medium p{
+    color: var(--white);;
+}
 }

@@ -397,7 +397,7 @@ Version: 1.0
 .navbar-brand-left .side::-webkit-scrollbar {
 	display: none;
 }
-  
+
   /* Hide scrollbar for IE, Edge and Firefox */
 .navbar-brand-left .side {
 	-ms-overflow-style: none;
@@ -677,7 +677,7 @@ nav.validnavs.navbar-full .navbar-collapse ul.nav {
 
 .validnavs a {
 	color: #232323;
-	font-weight: 600;
+	font-weight: 300;
 	text-transform: capitalize;
 	background: transparent;
 }
@@ -865,7 +865,7 @@ nav.navbar.navbar-default.validnavs li.dropdown ul.dropdown-menu.cart-list li.to
 	height: 100%;
 }
 
-.top-search form, 
+.top-search form,
 .top-search form div {
 	height: auto;
 }
@@ -1142,7 +1142,7 @@ body.on-side nav.navbar::after {
 .navbar .side .widget.social li a {
 	color: var(--color-heading);
 	display: inline-block;
-	font-weight: 600;
+	font-weight: 300;
 	height: 45px;
 	line-height: 45px;
 	margin-right: 5px;
@@ -1553,7 +1553,7 @@ nav.navbar.validnavs.brand-center {
 	nav.navbar.validnavs li.dropdown ul.dropdown-menu>li>a {
 		padding: 12px 15px;
 		color: var(--color-heading);
-		font-weight: 600;
+		font-weight: 300;
 		font-size: 16px;
 		text-transform: uppercase;
 	}
@@ -1571,7 +1571,7 @@ nav.navbar.validnavs.brand-center {
 		text-align: left;
 		text-transform: capitalize;
 		width: 100%;
-		font-weight: 600 !important;
+		font-weight: 300 !important;
 	}
 
 	nav.navbar.validnavs ul.navbar-right li.dropdown.dropdown-left ul.dropdown-menu li a {
@@ -1580,7 +1580,7 @@ nav.navbar.validnavs.brand-center {
 
 	nav.navbar.validnavs li.dropdown ul.dropdown-menu li.dropdown>a.dropdown-toggle:before {
 		font-family: var(--fontawesome);
-		font-weight: 600;
+		font-weight: 300;
 		float: right;
 		content: "\f105";
 		margin-top: 0;
@@ -1588,7 +1588,7 @@ nav.navbar.validnavs.brand-center {
 
 	nav.navbar.validnavs ul.navbar-right li.dropdown ul.dropdown-menu li.dropdown>a.dropdown-toggle:before {
 		font-family: var(--fontawesome);
-		font-weight: 600;
+		font-weight: 300;
 		float: right;
 		content: "\f105";
 		margin-top: 0;
@@ -1596,7 +1596,7 @@ nav.navbar.validnavs.brand-center {
 
 	nav.navbar.validnavs ul.navbar-right li.dropdown.dropdown-left ul.dropdown-menu li.dropdown>a.dropdown-toggle:before {
 		font-family: var(--fontawesome);
-		font-weight: 600;
+		font-weight: 300;
 		float: left;
 		content: "\f104";
 		margin-top: 0;
@@ -2005,7 +2005,7 @@ nav.navbar.validnavs.brand-center {
 	nav.validnavs.navbar-sidebar ul.nav>li>a {
 		padding: 8px 15px !important;
 		text-transform: capitalize;
-		font-weight: 600;
+		font-weight: 300;
 		font-size: 14px;
 	}
 
@@ -2327,7 +2327,7 @@ nav.navbar.validnavs.brand-center {
 	float: right;
 }
 
-.nav-full-width.navbar .navbar-collapse.collapse::before, 
+.nav-full-width.navbar .navbar-collapse.collapse::before,
 .nav-full-width.navbar .navbar-collapse.collapse::after,
 nav.navbar.validnavs.navbar-fixed.nav-full-width .navbar-header::before,
 nav.navbar.validnavs.navbar-fixed.nav-full-width .navbar-header::after {
@@ -2382,7 +2382,7 @@ nav.navbar.validnavs.navbar-fixed.nav-full-width .navbar-header::after {
 .side-navbar-inner li a {
 	display: block;
 	font-size: 36px;
-	font-weight: 600;
+	font-weight: 300;
 }
 
 .nav-full-width .side > .widget {
@@ -2663,7 +2663,7 @@ ul.simple-menu-list > li i {
 
 	nav.navbar.validnavs ul.nav li.dropdown>ul.dropdown-menu li>a {
 		border-bottom: 1px solid #e7e7e7 !important;
-		font-weight: 600;
+		font-weight: 300;
 	}
 
 	nav.navbar.validnavs ul.nav li.dropdown>ul.dropdown-menu li:hover>a {
@@ -2744,6 +2744,8 @@ ul.simple-menu-list > li i {
 		padding: 13px 0 !important;
 		border-top: solid 1px #e0e0e0;
 		margin-bottom: -1px;
+        text-transform: uppercase;
+        font-size: 12px;
 	}
 
 	nav.navbar.validnavs .navbar-nav>li:first-child>a {
@@ -2793,7 +2795,7 @@ ul.simple-menu-list > li i {
 		color: var(--color-heading);
 		display: block;
 		font-size: 15px;
-		font-weight: 600;
+		font-weight: 300;
 		padding: 10px 0;
 		text-transform: capitalize;
 		width: 100%;
@@ -3155,9 +3157,9 @@ ul.simple-menu-list > li i {
 @media (min-width: 1024px) {
 	nav.navbar ul.nav>li>a {
 		padding: 30px 15px;
-		font-weight: 600;
-		font-size: 17px;
-		text-transform: capitalize;
+		font-weight: 300;
+		font-size: 13px;
+		text-transform: uppercase;
 	}
 
 	nav.navbar.attr-border-full ul.nav>li>a,
@@ -3270,7 +3272,7 @@ nav.validnavs.navbar-full .navbar-toggle:hover span {
 
 
 @media (max-width: 550px) {
-	
+
 	.navbar.less-logo .attr-right {
 		padding-right: 10px !important;
 	}
@@ -3668,7 +3670,8 @@ nav.navbar.validnavs .navbar-collapse.collapse button i {
 @media only screen and (min-width: 1200px) and (max-width: 1350px) {
 	.navbar.validnavs.navbar-default .navbar-nav li a {
 		padding: 30px 10px !important;
-		font-size: 14px;
+		font-size: 12px;
+        text-transform: uppercase;
 	}
 }
 

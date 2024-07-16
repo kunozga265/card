@@ -8,7 +8,7 @@
     <meta name="keywords" content=""/>
     <link rel="icon" href="{{asset('favicon.png')}}" sizes="32x32" type="image/png">
 
-    <title>{{ config('app.name', 'LUANAR - CARD') }}</title>
+    <title>{{ config('app.name', 'LUANAR - CARD') }} - {{$title}}</title>
 
     <!-- CSS -->
     <link href="{{asset('assetsv1/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -118,7 +118,8 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand d-flex" href="{{route('home')}}">
+                            <span>CARD</span>
                             <img src="{{asset('assets/img/luanar-logo.png')}}" class="logo" alt="Logo">
                         </a>
                     </div>
@@ -135,10 +136,10 @@
 
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li >
-                            <a href="#" class="">Home</a>
+                            <a href="{{route('home')}}" class="">Home</a>
                         </li>
                         <li >
-                            <a href="#" class="">About Us</a>
+                            <a href="{{route('about-us')}}" class="">About Us</a>
                         </li>
                         <li >
                             <a href="#" class="">Research Projects</a>
@@ -158,16 +159,16 @@
                     </ul>
                 </div><!-- /.navbar-collapse -->
 
-                <div class="attr-right">
-                    <!-- Start Atribute Navigation -->
-                    <div class="attr-nav">
-                        <ul>
-                            <li class="button"><a href="{{route("login")}}">Login</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Atribute Navigation -->
+{{--                <div class="attr-right">--}}
+{{--                    <!-- Start Atribute Navigation -->--}}
+{{--                    <div class="attr-nav">--}}
+{{--                        <ul>--}}
+{{--                            <li class="button"><a href="{{route("login")}}">Login</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                    <!-- End Atribute Navigation -->--}}
 
-                </div>
+{{--                </div>--}}
 
                 <!-- Main Nav -->
             </div>
@@ -211,7 +212,7 @@
                             <h4 class="widget-title">Explore</h4>
                             <ul>
                                 <li>
-                                    <a href="">About Us</a>
+                                    <a href="{{route('about-us')}}">About Us</a>
                                 </li>
                                 <li>
                                     <a href="">Research Projects</a>
