@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 //})->name("home");
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
