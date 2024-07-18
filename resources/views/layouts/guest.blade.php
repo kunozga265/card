@@ -142,19 +142,26 @@
                             <a href="{{route('about-us')}}" class="">About Us</a>
                         </li>
                         <li >
-                            <a href="#" class="">Research Projects</a>
+                            <a href="{{route('home')}}" class="">Research Projects</a>
                         </li>
                         <li >
-                            <a href="#" class="">Experts</a>
+                            <a href="{{route('experts')}}" class="">Experts</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Publications</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{route('publications',['section'=>'policy-briefs'])}}">Policy Briefs</a></li>
+                                <li><a href="{{route('publications',['section'=>'journal-articles'])}}">Journal Articles</a></li>
+                                <li><a href="{{route('publications',['section'=>'working-papers'])}}">Working Papers</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li >
+                            <a href="{{route('partners')}}" class="">Partners</a>
                         </li>
                         <li >
-                            <a href="#" class="">Publications</a>
-                        </li>
-                        <li >
-                            <a href="#" class="">Partners</a>
-                        </li>
-                        <li >
-                            <a href="#" class="">Contact Us</a>
+                            <a href="{{route('home')}}" class="">Contact Us</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

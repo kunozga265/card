@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
+Route::get('/experts', [PageController::class, 'experts'])->name('experts');
+Route::get('/publications/{section}', [PageController::class, 'publications'])->name('publications');
+Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');

@@ -115,7 +115,8 @@
                         {!! $introduction->description !!}
                         <div class="fun-fact-style-flex mt-35">
                             <div class="counter">
-                                <div class="timer" data-to="{{$introduction->title}}" data-speed="2000">{{$introduction->title}}</div>
+                                <div class="timer" data-to="{{$introduction->title}}"
+                                     data-speed="2000">{{$introduction->title}}</div>
                                 <!-- <div class="operator">M</div> -->
                             </div>
                             <span class="medium">{{$introduction->subtitle}}</span>
@@ -151,13 +152,13 @@
     <!-- Start Services
    ============================================= -->
     <div class="services-style-one-area bg-gray default-padding bottom-less">
-{{--        <div class="shape-right-top" style="background-image: url(assetsv1/img/shape/9.png);"></div>--}}
+        {{--        <div class="shape-right-top" style="background-image: url(assetsv1/img/shape/9.png);"></div>--}}
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="site-heading text-center">
-{{--                        <h5 class="sub-title">our rich database</h5>--}}
+                        {{--                        <h5 class="sub-title">our rich database</h5>--}}
                         <h2 class="title">Publications</h2>
                     </div>
                 </div>
@@ -228,14 +229,15 @@
          style="background-image: url({{asset($thematic_areas->image)}});">
         <div class="player"
              data-property="{videoURL:'w9eRIGTHKJM',containment:'.video-bg-live', showControls:false, autoPlay:true, zoom:0, loop:true, mute:true, startAt:13, opacity:1, quality:'default'}"></div>
-        <div class="shape-top-center" style="background-image: url({{asset('uploads/thematic-area-overlay.png')}});"></div>
+{{--        <div class="shape-top-center"--}}
+{{--             style="background-image: url({{asset('uploads/thematic-area-overlay.png')}});"></div>--}}
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-7">
                     <div class="benifit-items text-light">
-{{--                        <div class="shape">--}}
-{{--                            <img src="assetsv1/img/illustration/8.png" alt="Image Not Found">--}}
-{{--                        </div>--}}
+                        {{--                        <div class="shape">--}}
+                        {{--                            <img src="assetsv1/img/illustration/8.png" alt="Image Not Found">--}}
+                        {{--                        </div>--}}
                         <h2 class="title">{{$thematic_areas->title}}
                         </h2>
                         <p>
@@ -285,56 +287,61 @@
                                     <div class="fun-fact col-12 col-sm-6">
                                         <div class="counter">
                                             <div class="operator">{{$targets_money->subtitle}}</div>
-                                            <div class="timer" data-to="{{$targets_money->title}}" data-speed="2000">{{$targets_money->title}}</div>
+                                            <div class="timer" data-to="{{$targets_money->title}}"
+                                                 data-speed="2000">{{$targets_money->title}}</div>
                                         </div>
                                         <span class="medium">{!! $targets_money->description!!}</span>
                                     </div>
                                     <div class="fun-fact col-12 col-sm-6">
                                         <div class="counter">
                                             <div class="operator">{{$targets_policy_briefs->subtitle}}</div>
-                                            <div class="timer" data-to="{{$targets_policy_briefs->title}}" data-speed="2000">{{$targets_policy_briefs->title}}</div>
+                                            <div class="timer" data-to="{{$targets_policy_briefs->title}}"
+                                                 data-speed="2000">{{$targets_policy_briefs->title}}</div>
                                         </div>
                                         <span class="medium">{!! $targets_policy_briefs->description!!}</span>
                                     </div>
                                     <div class="fun-fact col-12 col-sm-6">
                                         <div class="counter">
                                             <div class="operator">{{$targets_students->subtitle}}</div>
-                                            <div class="timer" data-to="{{$targets_students->title}}" data-speed="2000">{{$targets_students->title}}</div>
+                                            <div class="timer" data-to="{{$targets_students->title}}"
+                                                 data-speed="2000">{{$targets_students->title}}</div>
                                         </div>
                                         <span class="medium">{!! $targets_students->description!!}</span>
                                     </div>
                                     <div class="fun-fact col-12 col-sm-6">
                                         <div class="counter">
                                             <div class="operator">{{$targets_dashboards->subtitle}}</div>
-                                            <div class="timer" data-to="{{$targets_dashboards->title}}" data-speed="2000">{{$targets_dashboards->title}}</div>
+                                            <div class="timer" data-to="{{$targets_dashboards->title}}"
+                                                 data-speed="2000">{{$targets_dashboards->title}}</div>
                                         </div>
                                         <span class="medium">{!! $targets_dashboards->description!!}</span>
                                     </div>
                                     <div class="fun-fact col-12 col-sm-6">
                                         <div class="counter">
                                             <div class="operator">{{$targets_publications->subtitle}}</div>
-                                            <div class="timer" data-to="{{$targets_publications->title}}" data-speed="2000">{{$targets_publications->title}}</div>
+                                            <div class="timer" data-to="{{$targets_publications->title}}"
+                                                 data-speed="2000">{{$targets_publications->title}}</div>
                                         </div>
                                         <span class="medium">{!! $targets_publications->description!!}</span>
                                     </div>
 
-                            </div>
-                            <div class="content">
+                                </div>
+                                <div class="content">
 
+                                </div>
+                                <!-- <div class="thumb">
+                                    <img src="assetsv1/img/thumb/4.jpg" alt="Image Not Found">
+                                    <a href="https://www.youtube.com/watch?v=3JigXb9KXqI" class="popup-youtube video-play-button">
+                                        <i class="fas fa-play"></i>
+                                        <div class="effect"></div>
+                                    </a>
+                                </div> -->
                             </div>
-                            <!-- <div class="thumb">
-                                <img src="assetsv1/img/thumb/4.jpg" alt="Image Not Found">
-                                <a href="https://www.youtube.com/watch?v=3JigXb9KXqI" class="popup-youtube video-play-button">
-                                    <i class="fas fa-play"></i>
-                                    <div class="effect"></div>
-                                </a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 </x-guest-layout>

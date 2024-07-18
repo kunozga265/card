@@ -303,7 +303,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--color-heading);
-	font-weight: 600;
+	font-weight: 300;
 	line-height: 1.2;
 	font-family: var(--font-default);
 	letter-spacing: 0;
@@ -1833,6 +1833,8 @@ p {
 	color: var(--color-heading);
 	border: none;
 	background: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 .btn.btn-theme::after {
@@ -3926,11 +3928,13 @@ a.btn-round-animation.dark {
 }
 
 .banner-style-one .content h2 {
-	font-size: 60px;
+	/*font-size: 60px;*/
 	/*font-family: var(--font-secondary);*/
 	font-size: 90px;
+    font-weight: 600;
 	/*letter-spacing: 3px;*/
 	margin-bottom: 30px;
+
 }
 
 .banner-style-one .content h2 strong {
@@ -5933,7 +5937,7 @@ ul.list-simple.text-light li p {
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 45%;
+	width: 50%;
 }
 
 .choose-us-style-three-badge {
@@ -5999,9 +6003,11 @@ ul.list-item li {
 	padding-left: 35px;
 	font-size: 18px;
 	margin-top: 5px;
+    color: var(--black);
 }
 
 ul.list-item li::after {
+    background-color: white;
 	position: absolute;
 	left: 0;
 	top: 7px;
@@ -6050,7 +6056,7 @@ ul.list-item li::after {
 
 .farmer-style-one-item .info {
 	display: inline-block;
-	float: right;
+	/*float: right;*/
 	margin-top: 24px;
 }
 
@@ -6059,8 +6065,9 @@ ul.list-item li::after {
 }
 
 .farmer-style-one-item .info span {
-	font-size: 14px;
-	font-weight: 600;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .farmer-style-one-item .thumb .social > i {
@@ -7641,7 +7648,7 @@ footer {
 }
 
 .footer-item.link li a {
-	font-weight: 500;
+	font-weight: 300;
 	color: #dedede;
 }
 
@@ -7676,7 +7683,7 @@ footer {
 
 .footer-item.recent-post li a {
 	line-height: 1;
-	font-weight: 600;
+	font-weight: 300;
 	color: #dedede;
 	font-size: 18px;
 }
@@ -7734,6 +7741,7 @@ footer {
 .footer-item.contact li {
 	display: flex;
 	margin-top: 20px;
+    font-weight: 300;
 }
 
 .footer-item.contact li strong {
@@ -7769,7 +7777,7 @@ footer {
 
 .footer-item.contact li a {
 	color: #dedede;
-	font-weight: 500;
+	font-weight: 300;
 }
 
 .footer-item.contact li a:hover {
@@ -8048,6 +8056,7 @@ footer {
 		font-size: 16px;
 		font-weight: 400;
 		margin-top: 10px;
+        color: var(--black);
 	}
 
 	ul.list-item li::after {
@@ -8464,10 +8473,11 @@ footer {
 		height: 400px;
 		width: 100%;
 		margin-bottom: 50px;
+        display: none;
 	}
 
 	.choose-us-style-three-area {
-		padding-top: 0;
+		/*padding-top: 0;*/
 	}
 
 	.list-grid .achivement-content {
@@ -9123,10 +9133,11 @@ footer {
 		width: 100%;
 		background-position: center;
 		margin-bottom: 40px;
+        display: none;
 	}
 
 	.choose-us-style-three-area {
-		padding-top: 0;
+		/*padding-top: 0;*/
 	}
 
 	.list-grid {
@@ -9826,14 +9837,101 @@ a.navbar-brand span{
     font-size: 30px;
 }
 
-.our-targets{
-    /*background-color: white;*/
-    /*padding-top: 60px;*/
-    /*padding-bottom: 60px;*/
+.our-targets.about-us{
+   text-align: center;
+}
+
+.our-targets.about-us .fun-fact{
+   padding-bottom: 0;
+}
+
+.our-targets.about-us .counter{
+    justify-content: center;
 }
 
 @media (max-width: 1024px) {
 .our-targets .fun-fact .medium p{
     color: var(--white);;
 }
+.our-targets.about-us .fun-fact .medium p{
+    color: var(--color-paragraph);;
+}
+}
+
+div.feature {
+    display: block;
+    padding: 50px;
+}
+
+.feature:first-child {
+    display: block;
+    background: var(--color-primary);
+    padding: 50px;
+}
+
+.feature:last-child {
+    background: var(--color-secondary);
+}
+
+.feature img {
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.feature .info p {
+    margin: 0;
+    color: var(--color-heading);
+}
+
+.publications .btn.btn-theme{
+    font-size: 12px;
+}
+
+.publications .tags ul {
+    margin-top: -8px;
+}
+
+.publications .tags ul li {
+    display: inline-block;
+}
+
+.publications .tags ul li a {
+    border: 1px solid #e7e7e7;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 6px 22px;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-radius: 30px;
+    color: var(--color-paragraph);
+    background: var(--white);
+}
+
+.publications .tags ul li a:hover {
+    color: var(--color-secondary);
+}
+
+/*.publications .tags ul li a:hover {*/
+/*    color: var(--color-optional);*/
+/*}*/
+
+.publications .info h2.title{
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-top: 0;
+}
+
+.publications .info p{
+    margin-bottom: 8px;
+}
+
+.publications .item{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e7e7e7;
+
 }
