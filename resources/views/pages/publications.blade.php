@@ -7,7 +7,7 @@
     <!-- Start Breadcrumb
     ============================================= -->
     <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light"
-         style="background-image: url({{asset($introduction->image)}});">
+         style="background-image: url({{asset($first_banner->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
