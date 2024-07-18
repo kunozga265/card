@@ -790,16 +790,16 @@ p {
 }
 
 .sub-title {
-	text-transform: capitalize;
-	color: var(--color-secondary);
-	font-weight: 600;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	margin-bottom: 20px;
-	font-family: var(--font-secondary);
-	font-size: 24px;
-	letter-spacing: 1px;
+    text-transform: capitalize;
+    color: var(--color-secondary);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    /* font-family: var(--font-secondary); */
+    font-size: 20px;
+    letter-spacing: normal;
 }
 
 .text-center .sub-title {
@@ -9883,19 +9883,19 @@ div.feature {
     color: var(--color-heading);
 }
 
-.publications .btn.btn-theme{
+.compound-list .btn.btn-theme{
     font-size: 12px;
 }
 
-.publications .tags ul {
+.compound-list .tags ul {
     margin-top: -8px;
 }
 
-.publications .tags ul li {
+.compound-list .tags ul li {
     display: inline-block;
 }
 
-.publications .tags ul li a {
+.compound-list .tags ul li a {
     border: 1px solid #e7e7e7;
     display: inline-block;
     font-weight: 500;
@@ -9909,15 +9909,15 @@ div.feature {
     background: var(--white);
 }
 
-.publications .tags ul li a:hover {
+.compound-list .tags ul li a:hover {
     color: var(--color-secondary);
 }
 
-/*.publications .tags ul li a:hover {*/
+/*.compound-list .tags ul li a:hover {*/
 /*    color: var(--color-optional);*/
 /*}*/
 
-.publications .info h2.title{
+.compound-list .info h2.title{
     margin-bottom: 8px;
     font-weight: 300;
     text-transform: none;
@@ -9925,13 +9925,37 @@ div.feature {
     margin-top: 0;
 }
 
-.publications .info p{
+.compound-list .info p{
     margin-bottom: 8px;
 }
 
-.publications .item{
+.compound-list .item{
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid #e7e7e7;
 
+}
+
+.partners .partner {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compound-list .funder:after{
+    position: absolute;
+    /*right: -15px;*/
+    /*top: 50%;*/
+    content: "";
+    height: 5px;
+    width: 5px;
+    background: var(--color-paragraph);
+    z-index: -1;
+    margin: 12px;
+    border-radius: 50%;
+}
+
+.compound-list .duration{
+    margin-left: 30px;
 }

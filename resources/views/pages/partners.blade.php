@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     <x-slot name="title">
-        Experts
+        Partners
     </x-slot>
 
     <!-- Start Breadcrumb
@@ -26,9 +26,11 @@
     <div class="partners default-padding ">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="{{asset('uploads/research.png')}}" alt="Partner Logo">
-                </div>
+                @for ($i = 1; $i < 24; $i++)
+                    <div class="partner col-12 col-sm-6 col-md-4 col-lg-3">
+                        <img src="{{asset('uploads/logos/'.$i.'.png')}}" alt="Partner Logo">
+                    </div>
+                @endfor
             </div>
         </div>
     </div>

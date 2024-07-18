@@ -142,7 +142,7 @@
                             <a href="{{route('about-us')}}" class="">About Us</a>
                         </li>
                         <li >
-                            <a href="{{route('home')}}" class="">Research Projects</a>
+                            <a href="{{route('projects')}}" class="">Research Projects</a>
                         </li>
                         <li >
                             <a href="{{route('experts')}}" class="">Experts</a>
@@ -161,7 +161,7 @@
                             <a href="{{route('partners')}}" class="">Partners</a>
                         </li>
                         <li >
-                            <a href="{{route('home')}}" class="">Contact Us</a>
+                            <a href="{{route('contact-us')}}" class="">Contact Us</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -214,7 +214,7 @@
                     <!-- End Single Itme -->
 
                     <!-- Single Itme -->
-                    <div class="col-lg-2 col-md-6 item">
+                    <div class="col-lg-4 col-md-6 item">
                         <div class="footer-item link">
                             <h4 class="widget-title">Explore</h4>
                             <ul>
@@ -222,65 +222,65 @@
                                     <a href="{{route('about-us')}}">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="">Research Projects</a>
+                                    <a href="{{route('projects')}}">Research Projects</a>
                                 </li>
                                 <li>
-                                    <a href="">Experts</a>
+                                    <a href="{{route('experts')}}">Experts</a>
+                                </li>
+{{--                                <li>--}}
+{{--                                    <a href="{{route('publications',)}}">Publications</a>--}}
+{{--                                </li>--}}
+                                <li>
+                                    <a href="{{route('partners')}}">Partners</a>
                                 </li>
                                 <li>
-                                    <a href="">Publications</a>
-                                </li>
-                                <li>
-                                    <a href="">Partners</a>
-                                </li>
-                                <li>
-                                    <a href="">Contact Us</a>
+                                    <a href="{{route('contact-us')}}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <!-- End Single Itme -->
 
-                    <!-- Single Itme -->
-                    <div class="col-lg-3 col-md-6 item">
-                        <div class="footer-item recent-post">
-                            <h4 class="widget-title">Recent Posts</h4>
-                            <ul>
-                                <li>
-                                    <div class="thumb">
-                                        <a href="">
-                                            <img src="{{asset('assetsv1/img/thumbs/1.jpg')}}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                    <div class="info">
-                                        <div class="meta-title">
-                                            <span class="post-date">12 Sep, 2023</span>
-                                        </div>
-                                        <h5><a href="">Meant widow equal an share least
-                                                part. </a></h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb">
-                                        <a href="">
-                                            <img src="{{asset('assetsv1/img/thumbs/2.jpg')}}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                    <div class="info">
-                                        <div class="meta-title">
-                                            <span class="post-date">18 Jul, 2023</span>
-                                        </div>
-                                        <h5><a href="">Future Plan & Strategy for
-                                                Consutruction </a></h5>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Itme -->
+{{--                    <!-- Single Itme -->--}}
+{{--                    <div class="col-lg-3 col-md-6 item">--}}
+{{--                        <div class="footer-item recent-post">--}}
+{{--                            <h4 class="widget-title">Recent Posts</h4>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <div class="thumb">--}}
+{{--                                        <a href="">--}}
+{{--                                            <img src="{{asset('assetsv1/img/thumbs/1.jpg')}}" alt="Thumb">--}}
+{{--                                        </a>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="info">--}}
+{{--                                        <div class="meta-title">--}}
+{{--                                            <span class="post-date">12 Sep, 2023</span>--}}
+{{--                                        </div>--}}
+{{--                                        <h5><a href="">Meant widow equal an share least--}}
+{{--                                                part. </a></h5>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <div class="thumb">--}}
+{{--                                        <a href="">--}}
+{{--                                            <img src="{{asset('assetsv1/img/thumbs/2.jpg')}}" alt="Thumb">--}}
+{{--                                        </a>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="info">--}}
+{{--                                        <div class="meta-title">--}}
+{{--                                            <span class="post-date">18 Jul, 2023</span>--}}
+{{--                                        </div>--}}
+{{--                                        <h5><a href="">Future Plan & Strategy for--}}
+{{--                                                Consutruction </a></h5>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <!-- End Single Itme -->--}}
 
                     <!-- Single Itme -->
-                    <div class="col-lg-3 col-md-6 item">
+                    <div class="col-lg-4 col-md-6 item">
                         <div class="footer-item contact">
                             <h4 class="widget-title">Contact Info</h4>
                             <ul>

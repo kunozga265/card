@@ -155,14 +155,14 @@
         {{--        <div class="shape-right-top" style="background-image: url(assetsv1/img/shape/9.png);"></div>--}}
         <div class="container">
 
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="site-heading text-center">
-                        {{--                        <h5 class="sub-title">our rich database</h5>--}}
-                        <h2 class="title">Publications</h2>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-6 offset-lg-3">--}}
+{{--                    <div class="site-heading text-center">--}}
+{{--                        --}}{{--                        <h5 class="sub-title">our rich database</h5>--}}
+{{--                        <h2 class="title">Publications</h2>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <div class="row justify-center">
                 <!-- Single Item -->

@@ -24,6 +24,8 @@ Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/experts', [PageController::class, 'experts'])->name('experts');
 Route::get('/publications/{section}', [PageController::class, 'publications'])->name('publications');
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
+Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
+Route::get('/research-projects', [PageController::class, 'projects'])->name('projects');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');

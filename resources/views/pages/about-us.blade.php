@@ -165,9 +165,9 @@
     <!-- Start Choose Us
     ============================================= -->
     <div class="choose-us-style-three-area default-padding bg-gray">
-        <div class="illustration-bottom">
-            <img src="{{asset('assetsv1/img/illustration/17.png')}}" alt="Image Not Found">
-        </div>
+{{--        <div class="illustration-bottom">--}}
+{{--            <img src="{{asset('assetsv1/img/illustration/17.png')}}" alt="Image Not Found">--}}
+{{--        </div>--}}
         <div class="shape" style="background-image: url({{$introduction->image}});"></div>
         <div class="container">
             <div class="row">

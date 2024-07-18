@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     <x-slot name="title">
-        Publications
+        Research Projects
     </x-slot>
 
     <!-- Start Breadcrumb
@@ -11,11 +11,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Publications</h1>
+                    <h1>Research Projects</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">Publications</li>
+                            <li class="active">Research Projects</li>
                         </ol>
                     </nav>
                 </div>
@@ -32,20 +32,17 @@
                     <div class="sidebar col-xl-4 col-lg-5 col-md-12 ">
                         <aside>
                             <div class="sidebar-item category">
-                                <h4 class="title">Category</h4>
+                                <h4 class="title">Filter Projects</h4>
                                 <div class="sidebar-info">
                                     <ul>
                                         <li>
-                                            <a href="{{route('publications',['section'=>'policy-briefs'])}}">Policy
-                                                Briefs <span>69</span></a>
+                                            <a href="{{route('projects',['filter'=>'all'])}}">All <span>69</span></a>
                                         </li>
                                         <li>
-                                            <a href="{{route('publications',['section'=>'journal-articles'])}}">Journal
-                                                Articles <span>25</span></a>
+                                            <a href="{{route('projects',['filter'=>'current'])}}">Current <span>25</span></a>
                                         </li>
                                         <li>
-                                            <a href="{{route('publications',['section'=>'working-papers'])}}">Working
-                                                Papers <span>18</span></a>
+                                            <a href="{{route('projects',['filter'=>'past'])}}">Past <span>18</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -60,12 +57,15 @@
                             <div class="item">
                                 <div class="info">
                                     <h2 class="title">
-                                        <a href="#"> Announcing if attachment Resolution sentiments</a>
+                                        <a href="#"> The Political Economy of Tobacco Farming in Low and Middle-Income Countries.</a>
                                     </h2>
-                                    <p>
-                                        Bndulgence diminution so discovered mr apartments. Are off under folly death
-                                        wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do
-                                        am or limits hearts. Resolve parties but why she shewing. She sang know now
+                                    <p class="details">
+                                        <span class="funder">
+                                            Michigan State University Alliance for African Partnership
+                                        </span>
+                                        <span class="duration">
+                                            5 Years (2017-2022)
+                                        </span>
                                     </p>
 
                                     <div class=" tags">
@@ -81,18 +81,48 @@
                                     {{--                                   <a class="btn mt-10 btn-md btn-theme animation" href="#">Learn More</a>--}}
                                 </div>
                             </div>
-
                             <!-- Single Item -->
                             <div class="item">
                                 <div class="info">
                                     <h2 class="title">
-                                        <a href="#"> Announcing if attachment Resolution sentiments</a>
+                                        <a href="#">Improving the Enabling Environment for Fertilizer Markets in Africa: An Institutional Collaborative Approach to Value Chain Development.</a>
                                     </h2>
-{{--                                    <p>--}}
-{{--                                        Bndulgence diminution so discovered mr apartments. Are off under folly death--}}
-{{--                                        wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do--}}
-{{--                                        am or limits hearts. Resolve parties but why she shewing. She sang know now--}}
-{{--                                    </p>--}}
+                                    <p class="details">
+                                        <span class="funder">
+                                            Michigan State University Alliance for African Partnership
+                                        </span>
+                                        <span class="duration">
+                                            2 Years (2017-2018)
+                                        </span>
+                                    </p>
+
+                                    <div class=" tags">
+                                        <div class="">
+                                            <ul>
+                                                <li><a href="#">Dr Innocent Phangaphanga</a>
+                                                </li>
+                                                <li><a href="#">Mr. Patrick Chimseu</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {{--                                   <a class="btn mt-10 btn-md btn-theme animation" href="#">Learn More</a>--}}
+                                </div>
+                            </div>
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="info">
+                                    <h2 class="title">
+                                        <a href="#"> Confronting Energy Poverty: Building an Interdisciplinary Evidence Base, Network, and Capacity for Transformative Change (PIRE).</a>
+                                    </h2>
+                                    <p class="details">
+                                        <span class="funder">
+                                            University of North Carolina (Chapel Hill)
+                                        </span>
+                                        <span class="duration">
+                                            5 Years (2017-2022)
+                                        </span>
+                                    </p>
 
                                     <div class=" tags">
                                         <div class="">
