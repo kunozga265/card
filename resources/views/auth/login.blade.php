@@ -1,5 +1,5 @@
 <x-auth-layout>
-    <div class="auth bg-cover shadow dark" style="background: url(assetsv1/img/banner/3.jpg);">
+    <div class="auth bg-cover shadow dark" style="background: url({{$first_banner->image}});">
         <div class="form">
             <!-- Session Status -->
             <x-auth-session-status class="mb-4" :status="session('status')" />
