@@ -151,7 +151,7 @@
 
     <!-- Start Services
    ============================================= -->
-    <div class="services-style-one-area bg-gray default-padding bottom-less">
+    <div class="services-style-one-area default-padding-bottom">
         {{--        <div class="shape-right-top" style="background-image: url(assetsv1/img/shape/9.png);"></div>--}}
         <div class="container">
 
@@ -179,7 +179,7 @@
                                 <!-- Seeing rather her you not esteem men settle genius excuse. Deal say over means age from. Comparison new melancholy son devonshire to the dispatched. -->
                             </p>
                         </div>
-                        <a href="services-details.html" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
+                        <a href="{{route('publications',['section'=>'policy-briefs'])}}" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- End Single Item -->
@@ -196,7 +196,7 @@
                             <p>
                                 <!-- Perming rather her you not esteem men settle genius excuse.  -->
                             </p>
-                            <a href="services-details.html" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
+                            <a href="{{route('publications',['section'=>'journal-articles'])}}" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                             <p>
                                 <!-- Seeing rather her you not esteem men settle genius excuse. Deal say over means age from. Comparison new melancholy son devonshire to the dispatched. -->
                             </p>
-                            <a href="services-details.html" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
+                            <a href="{{route('publications',['section'=>'working-papers'])}}" class="btn-angle"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -343,5 +343,33 @@
             </div>
         </div>
     </div>
+
+    <!-- Start Brand
+   ============================================= -->
+    <div class="brand-style-two-area text-center  default-padding">
+        <div class="container">
+            <div class="brand-style-two">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="brand5col swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper d-flex align-center">
+                                @for ($i = 1; $i < 24; $i++)
+                                    <!-- Single Item -->
+                                    <div class="swiper-slide">
+                                        <img src="{{asset('uploads/logos/'.$i.'.png')}}" alt="Partner Logo">
+                                    </div>
+                                    <!-- End Single Item -->
+                                @endfor
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Brand -->
+            </div>
+        </div>
+    </div>
+    <!-- End Brand -->
 
 </x-guest-layout>
