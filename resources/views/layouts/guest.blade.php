@@ -68,7 +68,7 @@
                             <i class="fas fa-clock"></i> Opening Hours : Monday- Friday, 08:00 am - 05:00pm
                         </li>
                         <li>
-                            <a href="tel:+4733378901"><i class="fas fa-phone-alt"></i> +26512345678</a>
+                            <a href="tel:+2651277433"><i class="fas fa-phone-alt"></i> +265 1 277 433/438</a>
                         </li>
                     </ul>
                 </div>
