@@ -4342,7 +4342,7 @@ ul.top-feature li:nth-child(2) p {
 	overflow: hidden;
 	z-index: 1;
 	padding: 50px;
-	background: var(--white);
+	background: #f2f2f2;
 	height: 100%;
 	border-radius: 30px;
 }

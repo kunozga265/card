@@ -1,9 +1,9 @@
 /* ===================================================================
-    
+
     Author          : Valid Theme
     Template Name   : Agrica - Organic Farm Agriculture Template
     Version         : 1.0
-    
+
 * ================================================================= */
 (function($) {
 	"use strict";
@@ -347,6 +347,11 @@
 			slidesPerView: 2,
 			spaceBetween: 15,
 			autoplay: true,
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
 			breakpoints: {
 				768: {
 					slidesPerView: 3,
@@ -398,7 +403,7 @@
 			loop: true,
 			slidesPerView: 2,
 			spaceBetween: 30,
-			autoplay: false,
+			autoplay: true,
 			breakpoints: {
 				768: {
 					slidesPerView: 3,

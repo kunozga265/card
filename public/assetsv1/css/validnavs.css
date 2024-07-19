@@ -1565,7 +1565,7 @@ nav.navbar.validnavs.brand-center {
 	nav.navbar.validnavs ul li.dropdown ul.dropdown-menu li a {
 		color: var(--color-heading);
 		display: block;
-		font-size: 16px;
+		font-size: 14px;
 		margin-bottom: 0;
 		padding: 7px 15px !important;
 		text-align: left;
@@ -1573,6 +1573,10 @@ nav.navbar.validnavs.brand-center {
 		width: 100%;
 		font-weight: 300 !important;
 	}
+    nav.navbar.validnavs ul li.dropdown ul.dropdown-menu li a:hover{
+        color: var(--color-secondary);
+    }
+
 
 	nav.navbar.validnavs ul.navbar-right li.dropdown.dropdown-left ul.dropdown-menu li a {
 		text-align: right;
