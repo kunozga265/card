@@ -34,7 +34,7 @@
 
                 <div class="col-tact-stye-one col-xl-7 col-lg-7">
                     <div class="contact-form-style-one mb-md-50">
-                        <img src="assets/img/illustration/10.png" alt="Image Not Found">
+{{--                        <img src="assets/img/illustration/10.png" alt="Image Not Found">--}}
                         <h5 class="sub-title">Have Questions?</h5>
                         <h2 class="heading">Send us a massage</h2>
                         <form action="https://validthemes.net/site-template/agrica/assets/mail/contact.php" method="POST" class="contact-form contact-form">
@@ -98,7 +98,7 @@
                             <li>
                                 <div class="content">
                                     <h5 class="title">Hotline</h5>
-                                    <a href="#">+265 1 277 433/438</a>
+                                    <a href="tel:+2651277433">+265 1 277 433/438</a>
                                 </div>
                             </li>
                             <li>
