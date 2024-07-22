@@ -6,15 +6,15 @@
 
     <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$first_banner->image}});">
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$banner->image}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Contact Us</h1>
+                    <h1>{{$banner->title}}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">Contact Us</li>
+                            <li class="active">{{$banner->title}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -35,9 +35,9 @@
                 <div class="col-tact-stye-one col-xl-7 col-lg-7">
                     <div class="contact-form-style-one mb-md-50">
 {{--                        <img src="assets/img/illustration/10.png" alt="Image Not Found">--}}
-                        <h5 class="sub-title">Have Questions?</h5>
-                        <h2 class="heading">Send us a massage</h2>
-                        <form action="https://validthemes.net/site-template/agrica/assets/mail/contact.php" method="POST" class="contact-form contact-form">
+                        <h5 class="sub-title">{{$first_heading->subtitle}}</h5>
+                        <h2 class="heading">{{$first_heading->title}}</h2>
+                        <form action="#" method="POST" class="contact-form contact-form">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -92,29 +92,25 @@
                             </span>
                         </h2>
                         <p>
-                            Developing capacity for sustainable and equitable development
+                            {{$second_heading->subtitle}}
                         </p>
                         <ul>
                             <li>
                                 <div class="content">
-                                    <h5 class="title">Hotline</h5>
-                                    <a href="tel:+2651277433">+265 1 277 433/438</a>
+                                    <h5 class="title">{{$phone_number->title}}</h5>
+                                    <a href="tel:{{$phone_number->subtitle}}">{{$phone_number->subtitle}}</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="info">
-                                    <h5 class="title">Our Location</h5>
-                                    <p>
-                                        LUANAR, Bunda Campus
-                                        P.O. BOX 219
-                                        Lilongwe, Malawi
-                                    </p>
+                                    <h5 class="title">{{$address->title}}</h5>
+                                   {!! $address->description !!}
                                 </div>
                             </li>
                             <li>
                                 <div class="info">
-                                    <h5 class="title">Official Email</h5>
-                                    <a href="mailto:card@luanar.ac.mw">card@luanar.ac.mw</a>
+                                    <h5 class="title">{{$email->title}}</h5>
+                                    <a href="mailto:{{$email->subtitle}}">{{$email->subtitle}}</a>
                                 </div>
                             </li>
                         </ul>

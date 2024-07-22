@@ -10,6 +10,35 @@ use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
+    /* BANNERS */
+    private $HOME_BANNER_1 = 1;
+    private $HOME_BANNER_2 = 2;
+    private $ABOUT_US_BANNER = 3;
+    private $PROJECTS_BANNER = 4;
+    private $EXPERTS_BANNER = 5;
+    private $PUBLICATIONS_BANNER = 6;
+    private $PARTNERS_BANNER = 7;
+    private $CONTACT_US_BANNER = 8;
+
+    /* PAGE CONTENT */
+    private $INTRODUCTION = 9;
+    private $MANDATE = 10;
+    private $MISSION = 11;
+    private $VISION = 12;
+    private $THEMATIC_AREAS = 13;
+    private $CORE_VALUES = 14;
+    private $RESEARCH_PILLAR = 15;
+    private $CONSULTANCY_PILLAR = 16;
+    private $TRAINING_PILLAR = 17;
+    private $OUTREACH_PILLAR = 18;
+    private $MONEY_TARGET_ = 19;
+    private $POLICY_BRIEFS_TARGET = 20;
+    private $STUDENTS_TARGET = 21;
+    private $DASHBOARDS_TARGET = 22;
+    private $PUBLICATIONS_TARGET = 23;
+    private $CONTACT_US_HEADING_1 = 24;
+    private $CONTACT_US_HEADING_2 = 25;
+
     public function dashboard()
     {
         return view('dashboard',);
@@ -70,139 +99,96 @@ class PageController extends Controller
 
     public function home()
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
+        $first_banner = Page::find($this->HOME_BANNER_1);
+        $second_banner = Page::find($this->HOME_BANNER_2);
+        $introduction = Page::find($this->INTRODUCTION);
+        $mission = Page::find($this->MISSION);
+        $vision = Page::find($this->VISION);
+        $thematic_areas = Page::find($this->THEMATIC_AREAS);
+        $pillars_research = Page::find($this->RESEARCH_PILLAR);
+        $pillars_consultancy = Page::find($this->CONSULTANCY_PILLAR);
+        $pillars_training = Page::find($this->TRAINING_PILLAR);
+        $pillars_outreach = Page::find($this->OUTREACH_PILLAR);
+        $targets_money = Page::find($this->MONEY_TARGET_);
+        $targets_policy_briefs = Page::find($this->POLICY_BRIEFS_TARGET);
+        $targets_students = Page::find($this->STUDENTS_TARGET);
+        $targets_dashboards = Page::find($this->DASHBOARDS_TARGET);
+        $targets_publications = Page::find($this->PUBLICATIONS_TARGET);
         return view('home',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
     }
 
     public function aboutUs()
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.about-us',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->ABOUT_US_BANNER);
+        $mandate = Page::find($this->MANDATE);
+        $mission = Page::find($this->MISSION);
+        $vision = Page::find($this->VISION);
+        $thematic_areas = Page::find($this->THEMATIC_AREAS);
+        $pillars_research = Page::find($this->RESEARCH_PILLAR);
+        $pillars_consultancy = Page::find($this->CONSULTANCY_PILLAR);
+        $pillars_training = Page::find($this->TRAINING_PILLAR);
+        $pillars_outreach = Page::find($this->OUTREACH_PILLAR);
+        $targets_money = Page::find($this->MONEY_TARGET_);
+        $targets_policy_briefs = Page::find($this->POLICY_BRIEFS_TARGET);
+        $targets_students = Page::find($this->STUDENTS_TARGET);
+        $targets_dashboards = Page::find($this->DASHBOARDS_TARGET);
+        $targets_publications = Page::find($this->PUBLICATIONS_TARGET);
+        $core_values = Page::find($this->CORE_VALUES);
+        return view('pages.about-us',compact("banner","mandate","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications","core_values"));
     }
 
     public function experts()
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.experts',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->EXPERTS_BANNER);
+
+        return view('pages.experts',compact("banner",));
     }
-    public function publications(Request $request, $section)
+    public function publications(Request $request)
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.publications',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->PUBLICATIONS_BANNER);
+
+        if($request->query("section") == "policy-briefs"){
+            $section = "Policy Briefs";
+            $heading = $section;
+        } else if($request->query("section") == "working-papers"){
+            $section = "Working Papers";
+            $heading = $section;
+        }else if($request->query("section") == "journal-articles"){
+            $section = "Journal Articles";
+            $heading = $section;
+        } else {
+            $section = "All";
+            $heading = "All Publications";
+        }
+
+        return view('pages.publications',compact("banner","section","heading"));
     }
     public function partners(Request $request)
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.partners',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->PARTNERS_BANNER);
+        return view('pages.partners',compact("banner"));
     }
 
     public function contactUs(Request $request)
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.contact-us',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->CONTACT_US_BANNER);
+        $first_heading = Page::find($this->CONTACT_US_HEADING_1);
+        $second_heading = Page::find($this->CONTACT_US_HEADING_2);
+
+        return view('pages.contact-us',compact("banner","first_heading","second_heading"));
     }
 
     public function projects(Request $request)
     {
-        $first_banner = Page::find(1);
-        $second_banner = Page::find(2);
-        $introduction = Page::find(3);
-        $mission = Page::find(4);
-        $vision = Page::find(5);
-        $thematic_areas = Page::find(6);
-        $pillars_research = Page::find(7);
-        $pillars_consultancy = Page::find(8);
-        $pillars_training = Page::find(9);
-        $pillars_outreach = Page::find(10);
-        $targets_money = Page::find(11);
-        $targets_policy_briefs = Page::find(12);
-        $targets_students = Page::find(13);
-        $targets_dashboards = Page::find(14);
-        $targets_publications = Page::find(15);
-        return view('pages.projects',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
+        $banner = Page::find($this->PROJECTS_BANNER);
+
+        if($request->query("filter") == "current"){
+            $filter = "current";
+        } else if($request->query("filter") == "past"){
+            $filter = "past";
+        } else {
+            $filter = "all";
+        }
+        return view('pages.projects',compact("banner","filter"));
     }
 }

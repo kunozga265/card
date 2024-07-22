@@ -6,16 +6,16 @@
 
     <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light"
-         style="background-image: url({{asset($first_banner->image)}});">
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$banner->image}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Publications</h1>
+                    <h1>{{$heading}}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">Publications</li>
+                            <li><a href="{{route('publications')}}">{{$banner->title}}</a></li>
+                            <li class="active">{{$section}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -35,6 +35,9 @@
                                 <h4 class="title">Category</h4>
                                 <div class="sidebar-info">
                                     <ul>
+                                        <li>
+                                            <a href="{{route('publications')}}">All <span>69</span></a>
+                                        </li>
                                         <li>
                                             <a href="{{route('publications',['section'=>'policy-briefs'])}}">Policy
                                                 Briefs <span>69</span></a>

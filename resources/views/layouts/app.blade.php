@@ -6,32 +6,135 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" href="{{asset('favicon.png')}}" sizes="32x32" type="image/png">
 
-        <title>{{ config('app.name', 'LUANAR - CARD') }}</title>
+        <title>{{ config('app.name', 'LUANAR - CARD') }} - {{$title}}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
+
         <!-- Scripts -->
+
+        <!-- Styles -->
+        <link href="{{asset('assetsv1/css/auth_style.css')}}" rel="stylesheet">
 
 
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+                <nav class="bg-gray system-nav">
+                    <!-- Aside -->
+                    <aside class="bg-gray-50 rounded dark:bg-gray-800 sidebar" aria-label="Sidebar">
+                        <div class="overflow-y-auto ">
+                            <div class="header">
+                                <button class="toggle_nav" type="button" >
+                                    <span class="text-white mdi mdi-close-circle-outline"></span>
+                                </button>
+                                <div class="title">
+                                    <div>
+                                        <p>CARD Admin Panel</p>
+{{--                                        <div class="flex">--}}
+{{--                                            <div class="bg-gray h-5 w-h rounded-full mr-5"></div>--}}
+{{--                                            <div>{{ Auth::user()->name }}</div>--}}
+{{--                                        </div>--}}
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="px-10 p-6 overflow-y-auto">
+                                <ul class="space-y-2 text-sm">
+                                    <li>
+                                        <a href="{{route("dashboard")}}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                         <i class="mdi mdi-monitor-dashboard"></i>
+                                            <span class="ms-3">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                                            <i class="mdi mdi-book-open-page-variant-outline"></i>
+                                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap text-sm">Page Content</span>
+                                            <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                            </svg>
+                                        </button>
+                                        <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                                            @foreach($pages as $page)
+                                                <li>
+                                                    <a href="{{route("pages.show",["id"=>$page->id])}}" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                                        {{ $page->name }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+{{--                            <ul class="px-10 p-6">--}}
+{{--                                <li>--}}
+{{--                                  Links--}}
+{{--                                </li>--}}
+
+{{--                            </ul>--}}
+                        </div>
+                    </aside>
+
+                    <div class="navbar">
+                        <!-- Primary Navigation Menu -->
+                        @include('layouts.navigation')
+                        <!-- Page Heading -->
+                        @if (isset($header))
+                            <header class="bg-white shadow">
+                                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                    {{ $header }}
+                                </div>
+                            </header>
+                        @endif
                     </div>
-                </header>
-            @endif
+
+                </nav>
+
+                <div class="system-content">
+                    <!-- Page Content -->
+                    <main>
+                        <div class="py-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+                            @if($message=Session::get('info'))
+                                <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+                                    <span class="font-medium">Alert!</span> {{$message}}
+                                </div>
+                            @endif
+                            @if($message=Session::get('error'))
+                                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                                    <span class="font-medium">Error!</span> {{$message}}
+                                </div>
+                            @endif
+                            @if($message=Session::get('success'))
+                                <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                                    <span class="font-medium">Success!</span> {{$message}}
+                                </div>
+                            @endif
+                            @if($message=Session::get('warning'))
+                                <div class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+                                    <span class="font-medium">Warning!</span> {{$message}}
+                                </div>
+                            @endif
+
+                        </div>
+
+                        {{ $slot }}
+                    </main>
+
+                </div>
 
 
 
-            <!-- drawer component -->
+
+
+          {{--  <!-- drawer component -->
             <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
@@ -74,41 +177,16 @@
                     </ul>
                 </div>
             </div>
+--}}
 
-            <!-- Page Content -->
-            <main>
-                <div class="py-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    @if($message=Session::get('info'))
-                    <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-                        <span class="font-medium">Alert!</span> {{$message}}
-                    </div>
-                    @endif
-                     @if($message=Session::get('error'))
-                    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                        <span class="font-medium">Error!</span> {{$message}}
-                    </div>
-                        @endif
-                        @if($message=Session::get('success'))
-                    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                        <span class="font-medium">Success!</span> {{$message}}
-                    </div>
-                        @endif
-                         @if($message=Session::get('warning'))
-                    <div class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
-                        <span class="font-medium">Warning!</span> {{$message}}
-                    </div>
-                        @endif
-
-                </div>
-
-                {{ $slot }}
-            </main>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
         <script src="{{ asset('assets/js/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('assets/js/tinymce.js') }}"></script>
+        <script src="{{asset('assetsv1/js/auth.js')}}"></script>
+
 
     </body>
 </html>

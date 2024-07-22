@@ -6,15 +6,15 @@
 
     <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$first_banner->image}});">
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$banner->image}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Experts</h1>
+                    <h1>{{$banner->title}}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">Experts</li>
+                            <li class="active">{{$banner->title}}</li>
                         </ol>
                     </nav>
                 </div>

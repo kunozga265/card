@@ -9878,10 +9878,11 @@ div.feature {
     margin-bottom: 30px;
 }
 
-.feature .info p {
+.feature:first-child .info p {
     margin: 0;
     color: var(--color-heading);
 }
+
 
 .compound-list .btn.btn-theme{
     font-size: 12px;
@@ -9958,4 +9959,10 @@ div.feature {
 
 .compound-list .duration{
     margin-left: 30px;
+}
+
+.top-bar-area .item-flex p {
+    margin: 0;
+    color: white;
+    padding-left: 4px;
 }

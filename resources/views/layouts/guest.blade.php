@@ -65,10 +65,10 @@
                 <div class="col-lg-8">
                     <ul class="item-flex">
                         <li>
-                            <i class="fas fa-clock"></i> Opening Hours : Monday- Friday, 08:00 am - 05:00pm
+                            <i class="fas fa-clock"></i> {{$operating_hours->title}} :  {!! $operating_hours->description !!}
                         </li>
                         <li>
-                            <a href="tel:+2651277433"><i class="fas fa-phone-alt"></i> +265 1 277 433/438</a>
+                            <a href="tel:{{$phone_number->subtitle}}"><i class="fas fa-phone-alt"></i> {{$phone_number->subtitle}}</a>
                         </li>
                     </ul>
                 </div>
@@ -76,22 +76,22 @@
                     <div class="social">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="{{$facebook->subtitle}}">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{$twitter->subtitle}}">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{$youtube->subtitle}}">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{$linkedin->subtitle}}">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </li>
@@ -290,7 +290,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Address:</strong>
-                                        P. O. Box 291, Lilongwe Malawi
+                                        {!! $address->description !!}
                                     </div>
                                 </li>
                                 <li>
@@ -299,7 +299,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Email:</strong>
-                                        <a href="mailto:info@validtheme.com">card@luanar.ac.mw</a>
+                                        <a href="mailto:{{$email->subtitle}}">{{$email->subtitle}}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -308,7 +308,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Phone:</strong>
-                                        <a href="tel:265">+265 34598768</a>
+                                        <a href="tel:{{$phone_number->subtitle}}">{{$phone_number->subtitle}}</a>
                                     </div>
                                 </li>
                             </ul>

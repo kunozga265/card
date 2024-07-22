@@ -6,15 +6,15 @@
 
     <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$first_banner->image}});">
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$banner->image}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>About Us</h1>
+                    <h1>{{$banner->title}}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">About</li>
+                            <li class="active">{{$banner->title}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -26,14 +26,10 @@
     <div class="default-padding">
         <div class="container">
             <h2 class="title">
-                CARD's Mandate
+                {{$mandate->title}}
             </h2>
             <div>
-                <p>The Centre is mandated to offer local and international consulting services in agriculture and food security, project management, planning and socio-economic impact evaluation of development programmes and projects, [agriculture engineering? and architecture ?] and environmental and ntural resources management, among others.</p>
-                    <p>CARD has combined their resources to provide independent consulting services with overseas researchers. CARD has the requisite expertise and experience working with reputable international (research) organizations such as IFPRI (USA), CIFOR (Indonesia/Zimbabwe), University of  Greenwich  and Natural Resources Institute (United Kingdom), Michigan State University and Clark University (USA).</p>
-                    <p>Our impartiality is of vital importance to our clients and is their guarantee of receiving independent and neutral professional advice.</p>
-                    <p>Our staff covers a wide range of development and engineering disciplines, with a high proportion of economists in addition to engineers, natural and social scientists from Lilongwe University of Agriculture and Natural Resources (LUANAR) faculties, represents a working environment that is truly multi-disciplinary.</p>
-                    <p>CARD activities are undertaken by highly motivated, dedicated and committed staff to contribute to the generation of information and knowledge needed for designing agricultural and natural resource interventions to lift people out of poverty. It is also committed to the transfer on knowledge to households on existing opportunities for increased access to output and input markets, credit and other vital information generated through research</p>
+               {!! $mandate->description !!}
             </div>
         </div>
     </div>
@@ -79,7 +75,7 @@
                             <div class="icon">
                                 <img src="{{$vision->image}}" alt="Image Not Found">
                             </div>
-                            <div class="info">
+                            <div class="info text-light">
                                 <h4>{{$vision->title}}</h4>
                                 {!! $vision->description !!}
                             </div>
@@ -164,26 +160,21 @@
 
     <!-- Start Choose Us
     ============================================= -->
-    <div class="choose-us-style-three-area default-padding bg-gray">
+    <div class="choose-us-style-three-area default-padding ">
 {{--        <div class="illustration-bottom">--}}
 {{--            <img src="{{asset('assetsv1/img/illustration/17.png')}}" alt="Image Not Found">--}}
 {{--        </div>--}}
-        <div class="shape" style="background-image: url({{$introduction->image}});"></div>
+        <div class="shape" style="background-image: url({{$core_values->image}});"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-6 pl-60 pl-md-15 pl-xs-15">
-                    <h2 class="title">Our Core Values</h2>
+                    <h2 class="title">{{$core_values->title}}</h2>
 {{--                    <p>--}}
 {{--                        Consume ipsum dolor sit amet consectetur adipisicing elit. Veritatis, illo ullam harum et fuga suscipit quibusdam sapiente. Corrupti ut consequatur magni minus! Iusto eos consectetur similique minus culpa odio temporibus.--}}
 {{--                    </p>--}}
                     <div class="list-grid">
                         <ul class="list-item">
-                            <li>Excellence</li>
-                            <li>Dynamism</li>
-                            <li>Integrity</li>
-                            <li>Professionalism</li>
-                            <li>Diversity</li>
-                            <li>Accountability</li>
+                           {!! $core_values->description !!}
                         </ul>
                     </div>
                 </div>

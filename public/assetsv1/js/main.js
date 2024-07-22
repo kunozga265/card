@@ -10,7 +10,10 @@
 
 	$(document).ready(function() {
 
-
+        $('#toggle_nav').on('click', 'button', function() {
+            $('aside.sidebar').toggleClass('extend');
+            console.log("here");
+        });
 
 		/* ==================================================
 		    # Tooltip Init
@@ -574,5 +577,7 @@
 		});
 	}
 	loader();
+
+
 
 })(jQuery); // End jQuery
