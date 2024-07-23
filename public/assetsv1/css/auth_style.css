@@ -270,3 +270,7 @@ button.add-new{
 .compound-list .duration{
     margin-left: 30px;
 }
+
+.breadcrumbs li a:hover{
+    color: var(--color-secondary);
+}
