@@ -108,6 +108,12 @@ aside.sidebar .header .title p{
     cursor: pointer;
 }
 
+.btn.error{
+    background-color: red;
+    color:white;
+}
+
+
 span.error{
     color: red;
     font-size: 14px;

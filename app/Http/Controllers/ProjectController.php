@@ -28,4 +28,14 @@ class ProjectController extends Controller
             return Redirect::back()->with("error","Project not found");
         }
     }
+    public function destroy($id)
+    {
+        $project = Project::find($id);
+        if(is_object($project)){
+            $project->delete();
+            return Redirect::route("projects.index")->with("success","Project successfully deleted!");
+        }else{
+            return Redirect::back()->with("error","Project not found");
+        }
+    }
 }

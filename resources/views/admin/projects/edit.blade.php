@@ -12,6 +12,19 @@
             {{ __('Research Projects - Edit') }}
 {{--            {{$project->title}}--}}
         </h2>
+
+        <form method="POST" action="{{ route('projects.destroy',["id"=>$project->id]) }}">
+            @csrf
+
+            <div class="actions">
+                <button class="btn error" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                    <i class="mdi mdi-trash"></i>
+                    <span>Delete</span>
+                </button>
+            </div>
+
+        </form>
     </x-slot>
 
         <x-slot name="breadcrumbs">

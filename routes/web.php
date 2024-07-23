@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [ProjectController::class, 'index'])->name('projects.index');
         Route::get('/new', [ProjectController::class, 'create'])->name('projects.create');
         Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
+        Route::post('/destroy/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
     });
 });
 
