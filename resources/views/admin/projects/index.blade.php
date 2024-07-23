@@ -41,7 +41,7 @@
 
                         <div class="">
                             <div class="info">
-                                <div class="text-xl text-gray-800 leading-tight">
+                                <div class="text-xl text-gray-800 leading-tight ">
                                     <a href="{{route("projects.edit",["id"=>$project->id])}}"> {{$project->title}}</a>
                                 </div>
                                 <p class="details">
@@ -53,6 +53,8 @@
                                     <span class="duration">
                                             {{$project->duration}}
                                         </span>
+
+                                        <span class="status {{$project->active? "active":''}}">{{$project->active? "Current":'Past'}}</span>
                                 </p>
 
                                 <div class=" tags">

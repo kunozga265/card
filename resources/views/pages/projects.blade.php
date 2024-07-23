@@ -6,7 +6,7 @@
 
     <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{$banner->image}});">
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({{asset($banner->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -36,13 +36,13 @@
                                 <div class="sidebar-info">
                                     <ul>
                                         <li>
-                                            <a href="{{route('projects',['filter'=>'all'])}}">All <span>69</span></a>
+                                            <a href="{{route('projects',['filter'=>'all'])}}">All <span>{{$current + $past}}</span></a>
                                         </li>
                                         <li>
-                                            <a href="{{route('projects',['filter'=>'current'])}}">Current <span>25</span></a>
+                                            <a href="{{route('projects',['filter'=>'current'])}}">Current <span>{{$current}}</span></a>
                                         </li>
                                         <li>
-                                            <a href="{{route('projects',['filter'=>'past'])}}">Past <span>18</span></a>
+                                            <a href="{{route('projects',['filter'=>'past'])}}">Past <span>{{$past}}</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -58,7 +58,7 @@
                             <div class="item">
                                 <div class="info">
                                     <h2 class="title">
-                                        <a href="#">{{$project->title}}</a>
+                                        <a href="{{route('projects.show',['slug'=>$project->slug])}}">{{$project->title}}</a>
                                     </h2>
                                     <p class="details">
                                         @foreach($funders = json_decode($project->funders) as $funder)
@@ -69,6 +69,8 @@
                                         <span class="duration">
                                             {{$project->duration}}
                                         </span>
+
+                                            <span class="status {{$project->active? "active":''}}">{{$project->active? "Current":'Past'}}</span>
                                     </p>
 
                                     <div class=" tags">

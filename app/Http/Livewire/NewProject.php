@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Http\Controllers\AppController;
 use App\Models\Project;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class NewProject extends Component
@@ -33,6 +34,7 @@ class NewProject extends Component
 
         Project::create([
             "title" => $this->title,
+            "slug" => Str::slug($this->title)."-".date("Y-m-d"),
             "date" => (new AppController())->getTimestamp($this->date),
             "duration" => $this->duration,
             "active" => $this->active != null,

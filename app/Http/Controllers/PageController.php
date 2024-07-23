@@ -182,6 +182,12 @@ class PageController extends Controller
     public function projects(Request $request)
     {
         $banner = Page::find($this->PROJECTS_BANNER);
+        $current = Project::where("active",1)->count();
+        $past = Project::where("active",0)->count();
+
+
+        $projects = Project::orderBy("date","desc")->paginate(20);
+
 
         if($request->query("filter") == "current"){
             $filter = "current";
@@ -193,6 +199,19 @@ class PageController extends Controller
 
         $projects = Project::all();
 
-        return view('pages.projects',compact("banner","filter","projects"));
+        return view('pages.projects',compact("banner","filter","projects","current","past"));
+    }
+
+    public function projectShow(Request $request, $slug)
+    {
+        $banner = Page::find($this->PROJECTS_BANNER);
+
+        $project = Project::where("slug",$slug)->first();
+
+        if(is_object($project)){
+            return view('pages.projects-show',compact("banner","project"));
+        }else{
+            return Redirect::back()->with("error", "Project not found");
+        }
     }
 }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("duration");
+            $table->string("slug")->unique();
             $table->double("date");
             $table->boolean("active");
             $table->json("funders")->nullable();

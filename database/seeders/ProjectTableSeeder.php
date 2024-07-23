@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class ProjectTableSeeder extends Seeder
 {
@@ -18,6 +19,7 @@ class ProjectTableSeeder extends Seeder
         Project::create([
            "title" => "The Political Economy of Tobacco Farming in Low and Middle-Income Countries",
             "duration" => "5 Years (2017-2022)",
+            "slug" => Str::slug("The Political Economy of Tobacco Farming in Low and Middle-Income Countries")."-".date("Y-m-d"),
             "date" => 1483221600,
             "active" => false,
             "funders" => json_encode([
@@ -55,6 +57,7 @@ class ProjectTableSeeder extends Seeder
         Project::create([
            "title" => "Improving the Enabling Environment for Fertilizer Markets in Africa: An Institutional Collaborative Approach to Value Chain Development",
             "duration" => "2 Years (2017-2018)",
+            "slug" => Str::slug("Improving the Enabling Environment for Fertilizer Markets in Africa: An Institutional Collaborative Approach to Value Chain Development")."-".date("Y-m-d"),
             "date" => 1483221600,
             "active" => false,
             "funders" => json_encode([
@@ -87,6 +90,7 @@ class ProjectTableSeeder extends Seeder
         Project::create([
            "title" => "Confronting Energy Poverty: Building an Interdisciplinary Evidence Base, Network, and Capacity for Transformative Change (PIRE).",
             "duration" => "5 Years (2017-2022)",
+            "slug" => Str::slug("Confronting Energy Poverty: Building an Interdisciplinary Evidence Base, Network, and Capacity for Transformative Change (PIRE).")."-".date("Y-m-d"),
             "date" => 1483221600,
             "active" => false,
             "funders" => json_encode([

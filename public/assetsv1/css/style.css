@@ -352,6 +352,8 @@ p {
 }
 
 
+
+
 /* ==============================================================
     # Helper CSS
 =================================================================== */
@@ -9924,6 +9926,7 @@ div.feature {
     text-transform: none;
     letter-spacing: normal;
     margin-top: 0;
+    font-size: 25px !important;
 }
 
 .compound-list .info p{
@@ -9934,7 +9937,10 @@ div.feature {
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid #e7e7e7;
+}
 
+.compound-list .item:last-child{
+    border-bottom: none;
 }
 
 .partners .partner {
@@ -9973,3 +9979,45 @@ div.feature {
     color: white;
     padding-left: 4px;
 }
+
+.compound-list .status{
+    background-color: #f1f4f8;
+    color: var(--color-paragraph);
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 9px;
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+.sidebar-item .compound-list .info h2.title{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.compound-list .status.active, .sidebar-item .compound-list .status.active{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.sidebar-item .compound-list .status{
+    background-color: white;
+    color: var(--color-paragraph);
+}
+
+.compound-list ol.details, .compound-list ul.details{
+    padding: 0 20px;
+}
+.compound-list ol.details li{
+    font-weight: 300;
+    list-style: decimal;
+}
+
+.padding-40{
+    padding: 40px;
+}
+
+.margin-bottom-40{
+    margin-bottom: 40px;
+}
+

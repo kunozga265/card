@@ -27,6 +27,7 @@ Route::get('/publications', [PageController::class, 'publications'])->name('publ
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/research-projects', [PageController::class, 'projects'])->name('projects');
+Route::get('/research-projects/{slug}', [PageController::class, 'projectShow'])->name('projects.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
