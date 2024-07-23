@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
        $this->call(PageGroupTableSeeder::class);
        $this->call(ProjectTableSeeder::class);
+       $this->call(UserTableSeeder::class);
     }
 }
