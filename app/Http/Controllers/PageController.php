@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use App\Models\PageGroup;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -189,6 +190,9 @@ class PageController extends Controller
         } else {
             $filter = "all";
         }
-        return view('pages.projects',compact("banner","filter"));
+
+        $projects = Project::all();
+
+        return view('pages.projects',compact("banner","filter","projects"));
     }
 }

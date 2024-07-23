@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+    Route::group(["prefix"=>"admin/research-projects"],function(){
+        Route::get('/', [ProjectController::class, 'index'])->name('projects.index');
+        Route::get('/new', [ProjectController::class, 'create'])->name('projects.create');
+        Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
+    });
 });
 
 require __DIR__.'/auth.php';

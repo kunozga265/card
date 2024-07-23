@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&amp;display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&amp;display=swap');
+
 /* Varialbes */
 :root {
     --font-default: 'Outfit', sans-serif;
@@ -16,6 +21,19 @@
     --box-shadow-regular: 0px 2px 12px 0px #e7e7e7;
     --bg-gray: #e9f1ee;
     --bg-gradient: linear-gradient(97deg, #49a760 50%, rgba(252,197,27,1) 100%);
+}
+html, * {
+    font-family: var(--font-default);
+}
+
+body {
+    font-family: var(--font-default);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+    background-color: var(--white);
+    color: var(--color-paragraph);
 }
 
 .min-h-screen{
@@ -78,6 +96,37 @@ aside.sidebar .header .title p{
     margin-right: 1rem;
 }
 
+
+.navbar header .actions a, .btn{
+    background-color: var(--color-secondary);
+    font-size: 14px;
+    color: white;
+    padding: 12px 30px;
+    /*min-width: 100px;*/
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+span.error{
+    color: red;
+    font-size: 14px;
+}
+
+i.mdi.error{
+    color: red;
+}
+
+i.mdi.info{
+    color: var(--color-secondary);
+}
+
+button.add-new{
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+
 @media only screen and (min-width:280px) {
     aside.sidebar{
         width: 280px;
@@ -118,4 +167,106 @@ aside.sidebar .header .title p{
     .system-content{
         padding: 40px 60px 40px 340px;
     }
+}
+
+/*.compound-list .title {*/
+/*    font-weight: 600;*/
+/*    font-size: 25px !important;*/
+/*    margin-top: -10px;*/
+/*    margin-bottom: 45px;*/
+/*    text-transform: uppercase;*/
+/*    letter-spacing: 1px;*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+/*    .compound-list .title {*/
+/*        font-size: 22px !important;*/
+/*        font-weight: 700;*/
+/*        margin-top: 0;*/
+/*    }*/
+/*}*/
+
+.compound-list .btn.btn-theme{
+    font-size: 12px;
+}
+
+.compound-list .tags ul {
+    margin-top: -8px;
+}
+
+.compound-list .tags ul li {
+    display: inline-block;
+}
+
+.compound-list .tags ul li a {
+    border: 1px solid #e7e7e7;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 6px 22px;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-radius: 30px;
+    color: var(--color-paragraph);
+    background: var(--white);
+}
+
+.compound-list .tags ul li a:hover {
+    color: var(--color-secondary);
+}
+
+/*.compound-list .tags ul li a:hover {*/
+/*    color: var(--color-optional);*/
+/*}*/
+
+.compound-list .info h2.title{
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-top: 0;
+}
+
+.compound-list .info p{
+    margin-bottom: 8px;
+}
+
+.compound-list .item{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e7e7e7;
+
+}
+
+.partners .partner {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compound-list .funder:after{
+    position: absolute;
+    /*right: -15px;*/
+    /*top: 50%;*/
+    content: "";
+    height: 5px;
+    width: 5px;
+    background: var(--color-paragraph);
+    z-index: 1;
+    margin: 12px;
+    border-radius: 50%;
+}
+
+
+.compound-list .funder{
+    margin-left: 30px;
+}
+.compound-list .funder:first-child{
+    margin-left: 0;
+}
+
+.compound-list .duration{
+    margin-left: 30px;
 }

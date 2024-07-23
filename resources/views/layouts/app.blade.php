@@ -10,7 +10,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+{{--        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />--}}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
 
@@ -19,6 +19,7 @@
         <!-- Styles -->
         <link href="{{asset('assetsv1/css/auth_style.css')}}" rel="stylesheet">
 
+        @stack("styles")
 
     </head>
     <body class="font-sans antialiased">
@@ -71,6 +72,12 @@
                                             @endforeach
                                         </ul>
                                     </li>
+                                    <li>
+                                        <a href="{{route("projects.index")}}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                            <i class="mdi mdi-briefcase-outline"></i>
+                                            <span class="ms-3">Research Projects</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -89,9 +96,13 @@
                         <!-- Page Heading -->
                         @if (isset($header))
                             <header class="bg-white shadow">
-                                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                                     {{ $header }}
                                 </div>
+{{--                                <div>--}}
+{{--                                    {{$breadcrumbs}}--}}
+{{--                                </div>--}}
+{{--                                --}}
                             </header>
                         @endif
                     </div>
@@ -101,7 +112,7 @@
                 <div class="system-content">
                     <!-- Page Content -->
                     <main>
-                        <div class="py-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             @if($message=Session::get('info'))
                                 <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
                                     <span class="font-medium">Alert!</span> {{$message}}
@@ -187,6 +198,7 @@
         <script src="{{ asset('assets/js/tinymce.js') }}"></script>
         <script src="{{asset('assetsv1/js/auth.js')}}"></script>
 
+    @stack("scripts")
 
     </body>
 </html>
