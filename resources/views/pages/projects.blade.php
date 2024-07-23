@@ -90,24 +90,24 @@
                         </div>
 
                         <!-- Pagination -->
-                        <div class="row">
-                            <div class="col-md-12 pagi-area text-center">
-                                <nav aria-label="navigation">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html"><i
-                                                    class="fas fa-angle-double-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="blog-with-sidebar.html">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html">3</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html"><i
-                                                    class="fas fa-angle-double-right"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-12 pagi-area text-center">--}}
+{{--                                <nav aria-label="navigation">--}}
+{{--                                    <ul class="pagination">--}}
+{{--                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html"><i--}}
+{{--                                                    class="fas fa-angle-double-left"></i></a></li>--}}
+{{--                                        <li class="page-item active"><a class="page-link" href="blog-with-sidebar.html">1</a>--}}
+{{--                                        </li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html">2</a>--}}
+{{--                                        </li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html">3</a>--}}
+{{--                                        </li>--}}
+{{--                                        <li class="page-item"><a class="page-link" href="blog-with-sidebar.html"><i--}}
+{{--                                                    class="fas fa-angle-double-right"></i></a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </nav>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
 
 

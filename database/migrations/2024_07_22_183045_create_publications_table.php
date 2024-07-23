@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->string("slug");
+            $table->string("description")->nullable();
+            $table->string("link")->nullable();
+            $table->string("path")->nullable();
+            $table->double("date");
+            $table->integer("publication_type_id");
+            $table->json("authors")->nullable();
             $table->timestamps();
         });
     }

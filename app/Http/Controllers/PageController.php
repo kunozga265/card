@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Page;
 use App\Models\PageGroup;
 use App\Models\Project;
+use App\Models\Publication;
+use App\Models\PublicationType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -147,23 +149,24 @@ class PageController extends Controller
     public function publications(Request $request)
     {
         $banner = Page::find($this->PUBLICATIONS_BANNER);
+        $types = PublicationType::orderBy("name","asc")->get();
 
-        if($request->query("section") == "policy-briefs"){
-            $section = "Policy Briefs";
+        $type = PublicationType::where("slug", $request->query("section") )->first();
+        $all = Publication::count();
+
+        if(is_object($type)){
+            $section = $type->name;
             $heading = $section;
-        } else if($request->query("section") == "working-papers"){
-            $section = "Working Papers";
-            $heading = $section;
-        }else if($request->query("section") == "journal-articles"){
-            $section = "Journal Articles";
-            $heading = $section;
+            $publications = $type->publications;
         } else {
             $section = "All";
             $heading = "All Publications";
+            $publications = Publication::orderBy("date","desc")->get();
         }
 
-        return view('pages.publications',compact("banner","section","heading"));
+        return view('pages.publications',compact("banner","section","heading","types","publications","all"));
     }
+
     public function partners(Request $request)
     {
         $banner = Page::find($this->PARTNERS_BANNER);

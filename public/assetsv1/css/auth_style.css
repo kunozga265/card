@@ -280,3 +280,23 @@ button.add-new{
 .breadcrumbs li a:hover{
     color: var(--color-secondary);
 }
+
+.compound-list .status{
+    background-color: #f1f4f8;
+    color: var(--color-paragraph);
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 9px;
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+.compound-list .status.active, .sidebar-item .compound-list .status.active{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.sidebar-item .compound-list .status{
+    background-color: white;
+    color: var(--color-paragraph);
+}

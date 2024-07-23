@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\PublicationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/experts', [PageController::class, 'experts'])->name('experts');
 Route::get('/publications', [PageController::class, 'publications'])->name('publications');
+Route::get('/publications/{slug}', [PublicationController::class, 'download'])->name('publications.download');
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/research-projects', [PageController::class, 'projects'])->name('projects');
@@ -44,6 +46,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/new', [ProjectController::class, 'create'])->name('projects.create');
         Route::get('/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
         Route::post('/destroy/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+    });
+
+    Route::group(["prefix"=>"admin/publications"],function(){
+        Route::get('/', [PublicationController::class, 'index'])->name('publications.index');
+        Route::get('/new', [PublicationController::class, 'create'])->name('publications.create');
+        Route::get('/edit/{slug}', [PublicationController::class, 'edit'])->name('publications.edit');
+        Route::post('/destroy/{slug}', [PublicationController::class, 'destroy'])->name('publications.destroy');
     });
 });
 

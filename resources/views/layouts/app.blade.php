@@ -78,6 +78,12 @@
                                             <span class="ms-3">Research Projects</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{route("publications.index")}}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                            <i class="mdi mdi-book-open-outline"></i>
+                                            <span class="ms-3">Publications</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -137,7 +143,7 @@
 
                         </div>
 
-                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pb-4">
+                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pb-8">
 
                         <nav class="flex breadcrumbs" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
