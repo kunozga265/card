@@ -300,3 +300,12 @@ button.add-new{
     background-color: white;
     color: var(--color-paragraph);
 }
+
+/* Dashboard */
+.countries ol li{
+    /*list-style: decimal;*/
+}
+
+#map {
+    height: 100%;
+}

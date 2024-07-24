@@ -220,13 +220,14 @@
 
         </div>
 
+        @stack("scripts")
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
         <script src="{{ asset('assets/js/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('assets/js/tinymce.js') }}"></script>
         <script src="{{asset('assetsv1/js/auth.js')}}"></script>
 
-    @stack("scripts")
+
 
     </body>
 </html>

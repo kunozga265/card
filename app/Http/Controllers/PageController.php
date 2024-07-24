@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use App\Models\PageArea;
 use App\Models\PageGroup;
 use App\Models\Project;
 use App\Models\Publication;
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
+
+    /* PAGE AREAS */
+    private $HOME_AREA = 1;
+    private $ABOUT_US_AREA = 2;
+    private $EXPERTS_AREA = 3;
+    private $PUBLICATIONS_AREA = 4;
+    private $PARTNERS_AREA = 6;
+    private $CONTACT_US_AREA = 7;
+    private $RESEARCH_PROJECTS_AREA = 8;
+    private $RESEARCH_PROJECT_READ_AREA = 9;
+
     /* BANNERS */
     private $HOME_BANNER_1 = 1;
     private $HOME_BANNER_2 = 2;
@@ -42,10 +54,6 @@ class PageController extends Controller
     private $CONTACT_US_HEADING_1 = 24;
     private $CONTACT_US_HEADING_2 = 25;
 
-    public function dashboard()
-    {
-        return view('dashboard',);
-    }
     public function index()
     {
         $pages = PageGroup::all();
@@ -100,8 +108,12 @@ class PageController extends Controller
         }
     }
 
-    public function home()
+    public function home(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->HOME_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $first_banner = Page::find($this->HOME_BANNER_1);
         $second_banner = Page::find($this->HOME_BANNER_2);
         $introduction = Page::find($this->INTRODUCTION);
@@ -120,8 +132,12 @@ class PageController extends Controller
         return view('home',compact("first_banner","second_banner","introduction","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications"));
     }
 
-    public function aboutUs()
+    public function aboutUs(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->ABOUT_US_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->ABOUT_US_BANNER);
         $mandate = Page::find($this->MANDATE);
         $mission = Page::find($this->MISSION);
@@ -140,14 +156,22 @@ class PageController extends Controller
         return view('pages.about-us',compact("banner","mandate","mission","vision","thematic_areas","pillars_research","pillars_consultancy","pillars_training","pillars_outreach","targets_money","targets_policy_briefs","targets_students","targets_dashboards","targets_publications","core_values"));
     }
 
-    public function experts()
+    public function experts(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->EXPERTS_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->EXPERTS_BANNER);
 
         return view('pages.experts',compact("banner",));
     }
     public function publications(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->PUBLICATIONS_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->PUBLICATIONS_BANNER);
         $types = PublicationType::orderBy("name","asc")->get();
 
@@ -169,12 +193,20 @@ class PageController extends Controller
 
     public function partners(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->PARTNERS_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->PARTNERS_BANNER);
         return view('pages.partners',compact("banner"));
     }
 
     public function contactUs(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->CONTACT_US_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->CONTACT_US_BANNER);
         $first_heading = Page::find($this->CONTACT_US_HEADING_1);
         $second_heading = Page::find($this->CONTACT_US_HEADING_2);
@@ -184,6 +216,10 @@ class PageController extends Controller
 
     public function projects(Request $request)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->RESEARCH_PROJECTS_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->PROJECTS_BANNER);
         $current = Project::where("active",1)->count();
         $past = Project::where("active",0)->count();
@@ -207,6 +243,10 @@ class PageController extends Controller
 
     public function projectShow(Request $request, $slug)
     {
+        //Cache Visit
+        $page_area = PageArea::find($this->RESEARCH_PROJECT_READ_AREA);
+        (new AppController())->cacheVisit($request, $page_area);
+
         $banner = Page::find($this->PROJECTS_BANNER);
 
         $project = Project::where("slug",$slug)->first();

@@ -1,38 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Middleware;
 
 use App\Models\Visit;
-use Carbon\Carbon;
+use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 
-class AppController extends Controller
+class CacheVisit
 {
-
-    public function getTimestamp($dateTimeString, $timeString = null)
-    {
-        $date=explode('-',$dateTimeString);
-        $hour = 0;
-        $minutes = 0;
-
-        if($timeString != null){
-            $time=explode(':',$timeString);
-            $hour = $time[0];
-            $minutes = $time[1];
-        }
-
-        return  Carbon::create($date[0],$date[1],$date[2],$hour,$minutes,0)->getTimestamp();
-    }
-
-    public function cacheVisit(Request $request, $page_area, $comments = null)
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     */
+    public function handle(Request $request, Closure $next)
     {
         $response = Http::get("https://ipinfo.io/{{$request->ip()}}?token=db4aea6246dfbf");
         $ip_info = $response->json();
 
         Visit::create([
-            "page_area_id"=> $page_area->id,
             'visitor_id' => Crypt::encryptString($request->ip()),
             "ip" => $request->ip(),
             "city" => $ip_info["city"],
@@ -45,7 +35,9 @@ class AppController extends Controller
             "platform" => $request->server('HTTP_SEC_CH_UA_PLATFORM'),
             "path" => $request->path(),
             "method" => $request->method(),
-            "comments" => $comments
         ]);
+
+        return $next($request);
+
     }
 }

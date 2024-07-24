@@ -32,7 +32,7 @@ Route::get('/research-projects', [PageController::class, 'projects'])->name('pro
 Route::get('/research-projects/{slug}', [PageController::class, 'projectShow'])->name('projects.show');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/pages', [PageController::class, 'index'])->name('pages.index');
     Route::get('/pages/{id}', [PageController::class, 'show'])->name('pages.show');
     Route::post('/pages/{id}', [PageController::class, 'update'])->name('pages.update');
