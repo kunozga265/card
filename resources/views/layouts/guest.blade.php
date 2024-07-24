@@ -322,7 +322,7 @@
             <div class="footer-bottom text-center">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>&copy; Copyright 2023. All Rights Reserved</p>
+                        <p>&copy; Copyright  <script>document.write(new Date().getFullYear())</script>. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
