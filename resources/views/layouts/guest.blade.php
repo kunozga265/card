@@ -148,7 +148,7 @@
                             <a href="{{route('experts')}}" class="">Experts</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Publications</a>
+                            <a href="{{route('publications')}}" class="dropdown-toggle" data-toggle="dropdown" >Publications</a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{route('publications',['section'=>'policy-briefs'])}}">Policy Briefs</a></li>
                                 <li><a href="{{route('publications',['section'=>'journal-articles'])}}">Journal Articles</a></li>

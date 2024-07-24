@@ -14,6 +14,12 @@ class PublicationType extends Model
         return $this->hasMany(Publication::class);
     }
 
+    public function downloads()
+    {
+        return $this->hasMany(Download::class);
+    }
+
+
     protected $fillable =[
         "name",
         "slug",

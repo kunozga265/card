@@ -16,27 +16,30 @@
 
     <div class="">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="mr-4 md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">
-                        General Overview
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div style="grid-column: span 2 / span 2;" class=" p-6 mr-0 md:mr-4 md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="pb-6 text-gray-900">
+                        General Overview ({{$visitsCount}})
                     </div>
 
                     <div id="visit_bar_chart" class="apex-charts" dir="ltr"></div>
                 </div>
 
-                <div class="countries p-6  md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="countries p-6 md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="pb-6 text-gray-900">
                         Countries
                     </div>
                     <ol class="">
-                        @foreach($countries as $country)
-                            <li>
+                        @foreach($countriesData as $country)
+                            <li class="flex justify-between mb-1">
                                 <div class="flex items-center">
                                     <div class="mr-4">{{$loop->index+1}}.</div>
-                                    <img src="https://cdn.ipinfo.io/static/images/countries-flags/{{$country}}.svg"
+                                    <img src="https://cdn.ipinfo.io/static/images/countries-flags/{{$country['name']}}.svg"
                                          alt="" class="w-5 h-5 mr-2">
-                                    <div>{{$country}}</div>
+                                    <div>{{$country["name"]}}</div>
+                                </div>
+                                <div class="count flex justify-center items-center">
+                                    {{$country["count"]}}
                                 </div>
                             </li>
                         @endforeach
@@ -45,20 +48,42 @@
 
             </div>
 
-            <div class="mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    Page Traffic
+            <div class="p-6 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="pb-6 text-gray-900">
+                    Pages Summary
                 </div>
 
                 <div id="pages_bar_chart" class="apex-charts" dir="ltr"></div>
             </div>
 
-            <div class="mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    Page Traffic
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div style="grid-column: span 2 / span 2;" class="p-6 mr-0 md:mr-4 md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="pb-6  text-gray-900">
+                        Downloads Overview ({{$downloadsCount}})
+                    </div>
+
+                    <div id="types_bar_chart" class="apex-charts" dir="ltr"></div>
                 </div>
 
-                <div id="map"></div>
+                <div class="countries p-6  md:col-span-2 mb-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="pb-6 text-gray-900">
+                        Top Publications
+                    </div>
+                    <ol class="">
+                        @foreach($publications as $publication)
+                            <li class="flex justify-between mb-1">
+                                <div class="flex items-center">
+                                    <div class="mr-4">{{$loop->index+1}}.</div>
+                                    <div>{{$publication->title}}</div>
+                                </div>
+                                <div class="count flex justify-center items-center">
+                                    {{$publication->downloads->count()}}
+                                </div>
+                            </li>
+                        @endforeach
+                    </ol>
+                </div>
+
             </div>
 
         </div>
@@ -76,7 +101,7 @@
                 },
                 stroke: {width: [0, 2, 4], curve: "smooth"},
                 plotOptions: {bar: {columnWidth: "20%", rangeBarOverlap: false,}},
-                colors: ["#1cbb8c", "#fcb92c", "#0f9cf3"],
+                colors: ["#49a760", "#fcb92c", "#2C82ED66"],
                 series: [{name: "Visits", data: chartData.data},],
                 fill: {
                     opacity: [.85, .25, 1],
@@ -96,6 +121,34 @@
                 legend: {offsetY: 7}
             };
             (chart = new ApexCharts(document.querySelector("#visit_bar_chart"), options)).render();
+
+            chartData = {!! json_encode($typesBarData) !!};
+            options = {
+                chart: {
+                    height: 350, type: "bar",
+                },
+                stroke: {width: [0, 2, 4], curve: "smooth"},
+                plotOptions: {bar: {columnWidth: "20%", rangeBarOverlap: false, horizontal: true}},
+                colors: ["#49a760", "#f7c35f", "#2C82ED66"],
+                series: [{name: "Downloads", data: chartData.data},],
+                fill: {
+                    opacity: [.85, .25, 1],
+                    gradient: {
+                        inverseColors: !1,
+                        shade: "light",
+                        type: "vertical",
+                        opacityFrom: .85,
+                        opacityTo: .55,
+                        stops: [0, 100, 100, 100]
+                    }
+                },
+                dataLabels: {enabled: !1},
+                labels: chartData.labels,
+                markers: {size: 0},
+                // grid: {borderColor: "#f1f1f1", padding: {bottom: 10}},
+                legend: {offsetY: 7}
+            };
+            (chart = new ApexCharts(document.querySelector("#types_bar_chart"), options)).render();
 
 
             chartData = {!! json_encode($pageAreasData) !!};

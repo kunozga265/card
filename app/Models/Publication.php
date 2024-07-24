@@ -14,6 +14,11 @@ class Publication extends Model
         return $this->hasOne(PublicationType::class,"id","publication_type_id");
     }
 
+    public function downloads()
+    {
+        return $this->hasMany(Download::class);
+    }
+
     protected $fillable =[
         "title",
         "slug",

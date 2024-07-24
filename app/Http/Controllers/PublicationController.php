@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Download;
 use App\Models\PageArea;
 use App\Models\Publication;
 use Illuminate\Http\Request;
@@ -51,6 +52,12 @@ class PublicationController extends Controller
 
         $publication = Publication::where("slug",$slug)->first();
         if(is_object($publication)){
+
+            Download::create([
+                "publication_id" => $publication->id,
+                "publication_type_id" => $publication->id,
+            ]);
+
             return Redirect::away($publication->link);
         }else{
             return Redirect::back()->with("error","Publication not found");
