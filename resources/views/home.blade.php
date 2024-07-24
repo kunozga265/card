@@ -228,7 +228,7 @@
     <div class="benifits-area default-padding-top video-bg-live bg-cover mt--50 mt-md-0 mt-xs-0"
          style="background-image: url({{asset($thematic_areas->image)}});">
         <div class="player"
-             data-property="{videoURL:'w9eRIGTHKJM',containment:'.video-bg-live', showControls:false, autoPlay:true, zoom:0, loop:true, mute:true, startAt:13, opacity:1, quality:'default'}"></div>
+             data-property="{videoURL:'{{$thematic_areas->subtitle}}',containment:'.video-bg-live', showControls:false, autoPlay:true, zoom:0, loop:true, mute:true, startAt:13, opacity:1, quality:'default'}"></div>
 {{--        <div class="shape-top-center"--}}
 {{--             style="background-image: url({{asset('uploads/thematic-area-overlay.png')}});"></div>--}}
         <div class="container">

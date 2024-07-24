@@ -67,7 +67,7 @@
                             <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" value="{{$section->title}}" required autocomplete="title" />
                         </div>
                         <div class="mb-4 mr-4">
-                            <x-input-label for="subtitle" :value="__('Subtitle')" />
+                            <x-input-label for="subtitle" :value="__('Subtitle (Other)')" />
                             <x-text-input id="subtitle" class="block mt-1 w-full" type="text" name="subtitle" value="{{$section->subtitle}}" autocomplete="subtitle" />
                         </div>
 

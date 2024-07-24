@@ -144,7 +144,7 @@ class PageGroupTableSeeder extends Seeder
             "name" => "Thematic Areas",
             "page_group_id" => $page_group->id,
             "title" => "Thematic Areas",
-            "subtitle" => "",
+            "subtitle" => "w9eRIGTHKJM",
             "description" => "<ul>
 <li>Agricultural Production and Productivity</li>
 <li>Agricultural Commercialisation and Value Chain Analysis</li>
