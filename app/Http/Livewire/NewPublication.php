@@ -32,7 +32,7 @@ class NewPublication extends Component
 
         Publication::create([
             "title" => $this->title,
-            "slug" => Str::slug($this->title)."-".date("Y-m-d"),
+            "slug" => uniqid(),
             "description" => $this->description,
             "link" => $this->link,
             "path" => $this->path,
