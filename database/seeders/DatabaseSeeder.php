@@ -14,10 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call(PageGroupTableSeeder::class);
-       $this->call(ProjectTableSeeder::class);
-       $this->call(UserTableSeeder::class);
-       $this->call(PublicationTypeTableSeeder::class);
-       $this->call(PageAreaTableSeeder::class);
+        $this->call([
+            PageGroupTableSeeder::class,
+            ProjectTableSeeder::class,
+            UserTableSeeder::class,
+            PublicationTypeTableSeeder::class,
+            PageAreaTableSeeder::class,
+            ExpertTableSeeder::class,
+        ]);
     }
 }

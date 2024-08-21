@@ -324,3 +324,9 @@ button.add-new{
     height: 100%;
 }
 
+.avatar img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+

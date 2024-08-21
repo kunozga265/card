@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Expert;
 use App\Models\Page;
 use App\Models\PageArea;
 use App\Models\PageGroup;
@@ -163,8 +164,9 @@ class PageController extends Controller
         (new AppController())->cacheVisit($request, $page_area);
 
         $banner = Page::find($this->EXPERTS_BANNER);
+        $experts = Expert::all();
 
-        return view('pages.experts',compact("banner",));
+        return view('pages.experts',compact("banner","experts"));
     }
     public function publications(Request $request)
     {

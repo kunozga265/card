@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExpertController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -53,6 +54,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/new', [PublicationController::class, 'create'])->name('publications.create');
         Route::get('/edit/{slug}', [PublicationController::class, 'edit'])->name('publications.edit');
         Route::post('/destroy/{slug}', [PublicationController::class, 'destroy'])->name('publications.destroy');
+    });
+
+    Route::group(["prefix"=>"admin/experts"],function(){
+        Route::get('/', [ExpertController::class, 'index'])->name('experts.index');
+        Route::get('/new', [ExpertController::class, 'create'])->name('experts.create');
+        Route::get('/edit/{slug}', [ExpertController::class, 'edit'])->name('experts.edit');
+        Route::post('/destroy/{slug}', [ExpertController::class, 'destroy'])->name('experts.destroy');
     });
 });
 

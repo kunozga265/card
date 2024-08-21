@@ -30,176 +30,44 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="row">
+                        @foreach($experts as $expert)
+                        <!-- Single Item -->
+                        <div class="col-lg-4 col-md-6 farmer-stye-one">
+                            <div class="farmer-style-one-item">
+                                <div class="thumb">
+                                    <img src="{{asset($expert->photo)}}" alt="Image Not Found">
+                                    <div class="social">
+                                        <i class="fas fa-share-alt"></i>
+                                        <ul>
+                                            <li class="facebook">
+                                                <a href="{{$expert->getSocialLink("facebook")}}">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li class="twitter">
+                                                <a href="{{$expert->getSocialLink("twitter")}}">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="linkedin">
+                                                <a href="{{$expert->getSocialLink("linkedin")}}">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span>{{$expert->title}}</span>
+                                    <h4>
+                                        <a href="#">{{$expert->name}}</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        @endforeach
 
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 farmer-stye-one">
-                            <div class="farmer-style-one-item">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/innocent.png')}}" alt="Image Not Found">
-                                    <div class="social">
-                                        <i class="fas fa-share-alt"></i>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <span>Acting Director</span>
-                                    <h4><a href="farmer-details.html">Dr.
-                                            Innocent Mphangapanga-Phiri</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 farmer-stye-one">
-                            <div class="farmer-style-one-item">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/jumbe2.png')}}" alt="Image Not Found">
-                                    <div class="social">
-                                        <i class="fas fa-share-alt"></i>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <span>Professor of Economic</span>
-                                    <h4><a href="farmer-details.html">Professor Charles Jumbe</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 farmer-stye-one">
-                            <div class="farmer-style-one-item">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/Chilongo.jpg')}}" alt="Image Not Found">
-                                    <div class="social">
-                                        <i class="fas fa-share-alt"></i>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <span>Senior Research Fellow</span>
-                                    <h4><a href="farmer-details.html">Dr.
-                                            Thabbie Chilongo</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 farmer-stye-one">
-                            <div class="farmer-style-one-item">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/Makoka.jpg')}}" alt="Image Not Found">
-                                    <div class="social">
-                                        <i class="fas fa-share-alt"></i>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <span>Senior Research Fellow</span>
-                                    <h4><a href="farmer-details.html">Dr.
-                                            Donald Makoka</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-lg-4 col-md-6 farmer-stye-one">
-                            <div class="farmer-style-one-item">
-                                <div class="thumb">
-                                    <img src="{{asset('assets/img/CHAFUWA.jpg')}}" alt="Image Not Found">
-                                    <div class="social">
-                                        <i class="fas fa-share-alt"></i>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <span>Senior Research Fellow</span>
-                                    <h4><a href="farmer-details.html">Dr.
-                                            Chiyembekezo Chifuwa</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
                     </div>
                 </div>
             </div>

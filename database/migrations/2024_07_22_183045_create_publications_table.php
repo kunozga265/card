@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
+            $table->text("title");
             $table->string("slug");
             $table->string("description")->nullable();
             $table->string("link")->nullable();

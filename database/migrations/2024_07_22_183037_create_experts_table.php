@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('experts', function (Blueprint $table) {
             $table->id();
+            $table->string("photo");
+            $table->string("name");
+            $table->string("title");
+            $table->string("slug");
+            $table->json("socials");
             $table->timestamps();
         });
     }
