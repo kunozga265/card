@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        Research Projects
+        Publications
     </x-slot>
 
     <x-slot name="header" class="">

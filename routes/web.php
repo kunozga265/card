@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\PublicationController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,6 +62,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/new', [ExpertController::class, 'create'])->name('experts.create');
         Route::get('/edit/{slug}', [ExpertController::class, 'edit'])->name('experts.edit');
         Route::post('/destroy/{slug}', [ExpertController::class, 'destroy'])->name('experts.destroy');
+    });
+
+    Route::group(["prefix"=>"admin/users"],function(){
+        Route::get('/', [UserController::class, 'index'])->name('users.index');
+        Route::post('/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
     });
 });
 
