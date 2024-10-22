@@ -104,7 +104,7 @@
                     <div class="about-style-one-thumb">
                         <img src="{{$introduction->image}}" alt="Image Not Found">
                         <div class="animation-shape">
-                            <img src="{{asset('assetsv1/img/illustration/1.png')}}" alt="Image Not Found">
+{{--                            <img src="{{asset('assetsv1/img/illustration/1.png')}}" alt="Image Not Found">--}}
                         </div>
                     </div>
                 </div>
