@@ -72,7 +72,7 @@
                     <ol class="">
                         @foreach($publications as $publication)
                             <li class="flex justify-between mb-1">
-                                <div class="flex items-center">
+                                <div class="flex">
                                     <div class="mr-4">{{$loop->index+1}}.</div>
                                     <div>{{$publication->title}}</div>
                                 </div>
